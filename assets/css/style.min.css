@@ -450,12 +450,12 @@ footer.site-footer {
 .content ul {
   list-style: inside;
   margin-bottom: 1.5em;
-  font-size: 0.85em; }
+  font-size: 0.9em; }
 
 .content ol {
   margin: 0 0 1.5em 1.5em;
   margin-bottom: 20px;
-  font-size: 0.85em; }
+  font-size: 0.9em; }
 
 .content blockquote,
 .cbox {
@@ -500,7 +500,6 @@ pre code {
 /* = POST TYPES */
 .format-quote .entry-content {
   margin-top: 2em;
-  font-size: 110%;
   padding-left: 2.2em;
   background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZD0iTTQ1Ljk5NSAyNS41NjR2OS42MjRjMCAxLjMwNS0xLjA1OCAyLjM2My0yLjM2MyAyLjM2My00LjY1NyAwLTcuMTkgNC43NzYtNy41NDEgMTQuMjAzaDcuNTQxYzEuMzA1IDAgMi4zNjMgMS4wNTkgMi4zNjMgMi4zNjN2MjAuMzJjMCAxLjMwNS0xLjA1OCAyLjM2My0yLjM2MyAyLjM2M2gtMjAuMTA2Yy0xLjMwNiAwLTIuMzYzLTEuMDU5LTIuMzYzLTIuMzYzdi0yMC4zMmMwLTQuNTE5LjQ1NS04LjY2NiAxLjM1Mi0xMi4zMjcuOTItMy43NTQgMi4zMzItNy4wMzYgNC4xOTYtOS43NTYgMS45MTgtMi43OTUgNC4zMTctNC45ODggNy4xMzEtNi41MTYgMi44MzMtMS41MzcgNi4xMjctMi4zMTcgOS43OTEtMi4zMTcgMS4zMDQgMCAyLjM2MiAxLjA1OCAyLjM2MiAyLjM2M3ptMzAuNDc5IDExLjk4N2MxLjMwNSAwIDIuMzYzLTEuMDU5IDIuMzYzLTIuMzYzdi05LjYyNGMwLTEuMzA1LTEuMDU4LTIuMzYzLTIuMzYzLTIuMzYzLTMuNjYzIDAtNi45NTcuNzgtOS43OSAyLjMxNy0yLjgxNCAxLjUyOC01LjIxNCAzLjcyMS03LjEzMiA2LjUxNi0xLjg2NCAyLjcyLTMuMjc2IDYuMDAyLTQuMTk2IDkuNzU3LS44OTYgMy42NjItMS4zNTEgNy44MDktMS4zNTEgMTIuMzI2djIwLjMyYzAgMS4zMDUgMS4wNTggMi4zNjMgMi4zNjMgMi4zNjNoMjAuMTA1YzEuMzA1IDAgMi4zNjMtMS4wNTkgMi4zNjMtMi4zNjN2LTIwLjMyYzAtMS4zMDUtMS4wNTgtMi4zNjMtMi4zNjMtMi4zNjNoLTcuNDMzYy4zNDYtOS40MjcgMi44NDItMTQuMjAzIDcuNDM0LTE0LjIwM3oiLz48L3N2Zz4=) no-repeat top left;
   background-size: 40px 40px; }
@@ -770,6 +769,23 @@ pre code {
 
 .action-twitter {
   left: 160px; }
+
+/* Misc Entry Styling */
+a.bookmarklet {
+  line-height: 2;
+  text-align: center;
+  background: #eee;
+  padding: 5px 12px 4px 12px;
+  margin: 5px;
+  color: #333;
+  border: solid 1px #ccc;
+  font: 15px "Proxima Nova", "proxima-nova", sans-serif;
+  border-radius: 12px;
+  font-weight: bold; }
+
+a.bookmarklet:hover {
+  background: #ddd;
+  border: solid 1px #bbb; }
 
 /* ARCHIVES ----------------------------- */
 .archive-list li {

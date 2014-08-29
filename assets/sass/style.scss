@@ -399,12 +399,12 @@ margin: 1em 0;
   .content ul {
       list-style: inside;
       margin-bottom: 1.5em;
-      font-size: 0.85em;
+      font-size: 0.9em;
   }
   .content ol {
       margin: 0 0 1.5em 1.5em;
       margin-bottom: 20px;
-      font-size: 0.85em;
+      font-size: 0.9em;
   }
 
 .content blockquote,
@@ -452,7 +452,6 @@ pre code {
 
 .format-quote .entry-content {
   margin-top: 2em;
-  font-size: 110%;
   padding-left: 2.2em;
   background: $svg-icon-quote no-repeat top left;
   background-size: 40px 40px;
@@ -797,6 +796,26 @@ position: absolute;
 .action-twitter {
 left: 160px;
   }
+
+/* Misc Entry Styling */
+
+a.bookmarklet {
+line-height: 2;
+text-align: center;
+  background: #eee;
+  padding: 5px 12px 4px 12px;
+  margin: 5px;
+  color: #333;
+  border: solid 1px #ccc;
+  font: 15px $sans;
+  border-radius: 12px;
+  font-weight: bold;
+}
+a.bookmarklet:hover {
+  background: #ddd;
+  border: solid 1px #bbb;
+}
+
 
 /* ARCHIVES ----------------------------- */
 
