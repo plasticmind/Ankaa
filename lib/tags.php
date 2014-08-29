@@ -11,18 +11,15 @@ function pm_entry_byline() {
 
   // Populate Byline Variable
 
-  $byline['author_name'] = get_the_author();
-  $byline['author_url'] = get_author_posts_url( get_the_author_meta( 'ID' )) ;
-  $byline['entry_date'] = '· '.(is_single()?'':'<a href="'.get_permalink().'" title="'.esc_attr(get_the_title()).'" rel="bookmark" class="byline-date updated">').'<time class="entry-date" datetime="' . get_the_date( 'c' ) . '" pubdate itemprop="datePublished" content="'.get_the_date( 'Y-m-d' ).'">' . get_the_date('l, F j, Y') . '</time>'.(is_single()?'':'</a>');
+  $byline['author_link'] = (has_post_format('quote')?'':'by <span class="author vcard" itemprop="author"><a class="url fn n" rel="author" href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.get_the_author().'</a></span> · ');
+  $byline['entry_date'] = (is_single()?'':'<a href="'.get_permalink().'" title="'.esc_attr(get_the_title()).'" rel="bookmark" class="byline-date updated">').'<time class="entry-date" datetime="' . get_the_date( 'c' ) . '" pubdate itemprop="datePublished" content="'.get_the_date( 'Y-m-d' ).'">' . get_the_date('l, F j, Y') . '</time>'.(is_single()?'':'</a>');
 
   // Print Byline
 
   echo <<<EOT
 
-    <span class="entry-byline">by 
-      <span class="author vcard" itemprop="author">
-        <a class="url fn n" rel="author" href="{$byline['author_url']}">{$byline['author_name']}</a>
-      </span>
+    <span class="entry-byline"> 
+      {$byline['author_link']}
       {$byline['entry_date']}
     </span>
 

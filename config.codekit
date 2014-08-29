@@ -33,6 +33,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/i\/icon-quote.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 823,
+		"inputAbbreviatedPath": "\/assets\/i\/icon-quote.png",
+		"outputAbbreviatedPath": "\/assets\/i\/icon-quote.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/i\/me.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -40,17 +51,6 @@
 		"initialSize": 8461,
 		"inputAbbreviatedPath": "\/assets\/i\/me.jpg",
 		"outputAbbreviatedPath": "\/assets\/i\/me.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/i\/me.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 0,
-		"inputAbbreviatedPath": "\/assets\/i\/me.png",
-		"outputAbbreviatedPath": "\/assets\/i\/me.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

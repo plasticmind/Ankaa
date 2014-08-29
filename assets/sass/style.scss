@@ -118,7 +118,7 @@ font-size: 20px;
 line-height: 1.75;
 }
 .entry-title {
-font-size: 2em;
+font-size: 40px;
 }
 .entry-subtitle {
 font-size: 22px;
@@ -145,9 +145,16 @@ font-weight: 300;
 .content h5 {
   font-style: italic;
 }
+.entry-meta,
+#site-search .field {
+font-size: 0.8em;
+}
 footer.site-footer {
-  font-size: 0.8em;
-  text-transform: uppercase;
+font-size: 0.8em;
+text-transform: uppercase;
+}
+.entry-body {
+font-size: 1.1em;
 }
 
 /* HEADER ---------------------------- */
@@ -441,6 +448,15 @@ pre code {
   overflow: auto;
 }
 
+/* = POST TYPES */
+
+.format-quote .entry-content {
+  margin-top: 2em;
+  font-size: 110%;
+  padding-left: 2.2em;
+  background: $svg-icon-quote no-repeat top left;
+  background-size: 40px 40px;
+}
 
 /* = ENTRY IMAGES */
 
