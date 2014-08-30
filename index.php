@@ -21,8 +21,8 @@ get_header(); ?>
 
 			<?php else : ?>
 
-				<?php get_template_part( 'content', 'none' ); ?>
-
+				<?php echo "Sorry, we couldn't find what you were looking for.\n"; ?>
+				
 			<?php endif; ?>
 
 		</main>

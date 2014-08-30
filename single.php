@@ -34,8 +34,12 @@ get_header(); ?>
 
 
         <div class="entry-content" itemprop="mainContentOfPage">
-        
+
+          <?php $subtitle = get_post_meta( $post->ID, 'pm_subtitle', true ); ?>
+          <?php echo (!empty($subtitle)) ? '<div class="entry-subtitle">'.apply_filters('the_content',$subtitle).'</div>' : ''; ?>        
           <?php the_content(); ?>
+
+
           <?php wp_link_pages(
             array(
               'before'           => '<div class="page-links-next-prev">',
@@ -54,6 +58,7 @@ get_header(); ?>
         </div>
 
         <footer class="entry-meta">
+          <?php wpfp_link() ?>
           <?php pm_entry_byline(); ?>
           <?php echo pm_get_cats_and_tags_list(); ?>
         </footer>

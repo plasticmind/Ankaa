@@ -51,3 +51,36 @@ function pm_version_hash($file) {
   $full_path = get_template_directory() . $file;
   return hash_file('CRC32',$full_path);
 }
+
+/* = NAVIGATION: Display navigation to next/previous pages when applicable */
+
+if ( ! function_exists( 'pm_content_nav' ) ):
+function pm_content_nav( $nav_id ) {
+  global $wp_query;
+
+  $nav_class = 'site-navigation paging-navigation';
+
+  ?>
+  <nav role="navigation" id="<?php echo $nav_id; ?>" class="<?php echo $nav_class; ?>">
+    <h1 class="assistive-text"><?php _e( 'Post navigation', 'sr' ); ?></h1>
+
+  <?php if ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
+
+    <?php if ( get_next_posts_link() ) : ?>
+    <div class="nav-previous"><?php next_posts_link( __( 'More posts <span class="meta-nav">&rarr;</span>', 'sr' ) ); ?></div>
+    <?php endif; ?>
+
+    <?php if ( get_previous_posts_link() ) : ?>
+    <div class="nav-next"><?php previous_posts_link( __( '<span class="meta-nav">&larr;</span> Previous posts', 'sr' ) ); ?></div>
+    <?php endif; ?>
+
+    <?php if ( get_query_var('_mobile') ) : ?>
+    <div class="nav-top"><a href="#header" title="Back to top"><span>Top</span></a></div>
+    <?php endif; ?>
+
+  <?php endif; ?>
+
+  </nav><!-- #<?php echo $nav_id; ?> -->
+  <?php
+}
+endif; // sr_content_nav
