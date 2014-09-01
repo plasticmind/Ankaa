@@ -89,15 +89,18 @@ $(document).ready(function() {
 	}
 	$(window).scroll(function() {
 		delay(function(){
-		    if ($(this).scrollTop() >= img_height) { //use `this`, not `document`
-		        $('.site-header').addClass('expanded');
-		    } else {
-		    	$('.site-header').removeClass('expanded');
-		    }
+			if ( img_height == null) {
+				$('.site-header').addClass('expanded');
+			} else {
+				if ( $(this).scrollTop() >= img_height ) {
+					$('.site-header').addClass('expanded');
+				} else {
+			    	$('.site-header').removeClass('expanded');
+				}				
+			}
+
 		}, 10);
 	});
-
-	// KEEP SEARCH FORM OPEN IF ACTIVE???
 
 	var delay = (function(){
 	  var timer = 0;

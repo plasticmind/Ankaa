@@ -10,7 +10,7 @@ get_header(); ?>
   <div class="content">
     <main class="site-content" role="main">
 
-        <div class="entry-featuredimage ultra-wide full-size">
+        <div class="entry-featuredimage">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/i/phantom_selfie.jpg" alt="God bless the broken link.">
         </div>
 

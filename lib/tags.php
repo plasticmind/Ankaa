@@ -84,3 +84,48 @@ function pm_content_nav( $nav_id ) {
   <?php
 }
 endif; // sr_content_nav
+
+
+
+/* = NAVIGATION: Display navigation to next/previous pages when applicable */
+
+if ( ! function_exists( 'sr_content_nav' ) ):
+function sr_content_nav( $nav_id ) {
+  global $wp_query;
+
+  $nav_class = 'site-navigation paging-navigation';
+  if ( is_single() )
+    $nav_class = 'site-navigation post-navigation';
+
+  ?>
+  <nav role="navigation" id="<?php echo $nav_id; ?>" class="<?php echo $nav_class; ?>">
+    <h1 class="assistive-text"><?php _e( 'Post navigation', 'sr' ); ?></h1>
+
+  <?php if ( is_single() ) : // navigation links for single posts ?>
+
+    <?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'sr' ) . '</span> %title' ); ?>
+    <?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'sr' ) . '</span>' ); ?>
+
+  <?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
+
+    <?php if ( get_next_posts_link() ) : ?>
+    <div class="nav-previous"><?php next_posts_link( __( 'More posts <span class="meta-nav">&rarr;</span>', 'sr' ) ); ?></div>
+    <?php endif; ?>
+
+    <?php if ( get_previous_posts_link() ) : ?>
+    <div class="nav-next"><?php previous_posts_link( __( '<span class="meta-nav">&larr;</span> Previous posts', 'sr' ) ); ?></div>
+    <?php endif; ?>
+
+    <?php if ( get_query_var('_mobile') ) : ?>
+    <div class="nav-top"><a href="#header" title="Back to top"><span>Top</span></a></div>
+    <?php endif; ?>
+
+  <?php endif; ?>
+
+  </nav><!-- #<?php echo $nav_id; ?> -->
+  <?php
+}
+endif; // sr_content_nav
+
+add_filter('next_posts_link_attributes', 'sr_posts_link_nofollow');
+add_filter('previous_posts_link_attributes', 'sr_posts_link_nofollow');
