@@ -55,7 +55,7 @@ function pm_version_hash($file) {
 /* = NAVIGATION: Display navigation to next/previous pages when applicable */
 
 if ( ! function_exists( 'pm_content_nav' ) ):
-function pm_content_nav( $nav_id ) {
+function pm_content_nav( $nav_id=null ) {
   global $wp_query;
 
   $nav_class = 'site-navigation paging-navigation';

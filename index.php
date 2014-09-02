@@ -49,7 +49,7 @@ if ( 0 === get_query_var( 'page' ) ) {
     </article>
 
   <?php
-    rewind_posts();
+      rewind_posts();
     endif;
   } ?>
 

@@ -11,7 +11,7 @@ get_header(); ?>
     <main class="site-content" role="main">
 
         <div class="entry-featuredimage">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/i/phantom_selfie.jpg" alt="God bless the broken link.">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/i/photos/phantom_selfie.jpg" alt="God bless the broken link.">
         </div>
 
         <header class="entry-header">
@@ -19,7 +19,7 @@ get_header(); ?>
         </header>
 
         <div class="entry-content">
-          <p><b>The page you requested couldn't be found.</b> Perhaps we made a mistake. Or perhaps this is just a sign from the Internet that you should do some more exploring on the site...</p>
+          <p><b>The page you requested couldn't be found.</b> Perhaps we made a mistake. Or perhaps this is just a sign from the Internet that you should do some more exploring on the site? <a href="/archives/">To the archives!</a></p>
         </div>
 
     </main>
