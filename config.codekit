@@ -75,17 +75,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/assets\/js\/modernizr.custom.68660.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 1,
-		"inputAbbreviatedPath": "\/assets\/js\/modernizr.custom.68660.js",
-		"outputAbbreviatedPath": "\/assets\/js\/modernizr.custom.68660.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/assets\/js\/tools.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -103,6 +92,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/js\/tools.min.js",
 		"outputAbbreviatedPath": "\/assets\/js\/tools.min.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/assets\/js\/vendor\/modernizr.custom.68660.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
+		"inputAbbreviatedPath": "\/assets\/js\/vendor\/modernizr.custom.68660.js",
+		"outputAbbreviatedPath": "\/assets\/js\/vendor\/modernizr.custom.68660.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

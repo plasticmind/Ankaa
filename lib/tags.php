@@ -11,7 +11,7 @@ function pm_entry_byline() {
 
   // Populate Byline Variable
 
-  $byline['author_link'] = (has_post_format('quote')?'':'by <span class="author vcard" itemprop="author"><a class="url fn n" rel="author" href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.get_the_author().'</a></span> · ');
+  $byline['author_link'] = (has_post_format('quote')?'':'by <span class="author vcard" itemprop="author"><a class="url fn n" rel="author" href="/about/">'.get_the_author().'</a></span> · ');
   $byline['entry_date'] = (is_single()?'':'<a href="'.get_permalink().'" title="'.esc_attr(get_the_title()).'" rel="bookmark" class="byline-date updated">').'<time class="entry-date" datetime="' . get_the_date( 'c' ) . '" pubdate itemprop="datePublished" content="'.get_the_date( 'Y-m-d' ).'">' . get_the_date('l, F j, Y') . '</time>'.(is_single()?'':'</a>');
 
   // Print Byline
@@ -21,7 +21,7 @@ function pm_entry_byline() {
     <span class="entry-byline"> 
       {$byline['author_link']}
       {$byline['entry_date']}
-    </span>
+    </span>\n
 
 EOT;
 
@@ -62,20 +62,16 @@ function pm_content_nav( $nav_id ) {
 
   ?>
   <nav role="navigation" id="<?php echo $nav_id; ?>" class="<?php echo $nav_class; ?>">
-    <h1 class="assistive-text"><?php _e( 'Post navigation', 'sr' ); ?></h1>
+    <div class="assistive-text"><?php _e( 'Post navigation', 'sr' ); ?></div>
 
   <?php if ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
     <?php if ( get_next_posts_link() ) : ?>
-    <div class="nav-previous"><?php next_posts_link( __( 'More posts <span class="meta-nav">&rarr;</span>', 'sr' ) ); ?></div>
+    <div class="nav-previous"><?php next_posts_link( '<span class="nav-icon">&larr;</span><span class="nav-label"> Older</span>' ); ?></div>
     <?php endif; ?>
 
     <?php if ( get_previous_posts_link() ) : ?>
-    <div class="nav-next"><?php previous_posts_link( __( '<span class="meta-nav">&larr;</span> Previous posts', 'sr' ) ); ?></div>
-    <?php endif; ?>
-
-    <?php if ( get_query_var('_mobile') ) : ?>
-    <div class="nav-top"><a href="#header" title="Back to top"><span>Top</span></a></div>
+    <div class="nav-next"><?php previous_posts_link( '<span class="nav-label">Newer </span><span class="nav-icon">&rarr;</span>' ); ?></div>
     <?php endif; ?>
 
   <?php endif; ?>
