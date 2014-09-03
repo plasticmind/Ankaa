@@ -6,12 +6,15 @@
 add_action('wp_enqueue_scripts', 'pm_load_scripts');
 function pm_load_scripts() {
   if (!is_admin()) {
+    // Styles
   	wp_enqueue_style( 'pm-style', get_template_directory_uri().'/assets/css/style.min.css', null, pm_version_hash('/assets/css/style.min.css') );
+    // Scripts
     wp_deregister_script('jquery');
     wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js', array(), null, true );
     wp_enqueue_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr.custom.68660.js', array(), null, true );
     // wp_enqueue_script( 'pm-plugins', get_template_dire_urictory_uri() . '/assets/js/plugins.min.js', array('jquery'), version_hash('/assets/js/plugins.min.js'), true );
     wp_enqueue_script( 'pm-tools', get_template_directory_uri() . '/assets/js/tools.min.js', array('jquery'), pm_version_hash('/assets/js/tools.min.js'), true );
+    wp_enqueue_script( 'mint', 'http://plasticmind.com/mint/?js', array(), null, true );
   }
 }
 
