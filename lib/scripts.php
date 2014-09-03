@@ -18,7 +18,32 @@ function pm_load_scripts() {
   }
 }
 
-// Add Typekit font support
+// Google Analytics
+
+add_action('wp_head', 'pm_google_analytics');
+function pm_google_analytics() {
+  // If this is a 404, let's track it as an event with the URL and the referring page
+  if ( is_404() ):
+    $tracking_code = "'event', 'error', '404', 'url: '" + document.location.pathname + document.location.search + "' from: '" + document.referrer +"'";
+  else:
+    $tracking_code = "'pageview'";
+  endif;
+
+    echo <<<EOT
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-1045764-4', 'auto');
+        ga('send', $tracking_code);
+
+      </script>\n
+EOT;
+}
+
+// Typekit font support
 
 add_action('wp_head', 'pm_load_typekit');
 function pm_load_typekit() {
