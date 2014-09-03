@@ -103,10 +103,7 @@ get_header(); ?>
       ?>
     </nav>
 
-    <div class="entry-comments">
-
-    
-    </div>
+    <div class="entry-comments" id="comments"></div>
     <div class="footer-widgets">
       <?php dynamic_sidebar('footer-widgets'); ?>
     </div>
