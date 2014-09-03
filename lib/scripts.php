@@ -24,7 +24,7 @@ add_action('wp_head', 'pm_google_analytics');
 function pm_google_analytics() {
   // If this is a 404, let's track it as an event with the URL and the referring page
   if ( is_404() ):
-    $tracking_code = "'event', 'error', '404', 'url: '" + document.location.pathname + document.location.search + "' from: '" + document.referrer +"'";
+    $tracking_code = '"event", "error", "404", "url: " + document.location.pathname + document.location.search + " from: " + document.referrer';
   else:
     $tracking_code = "'pageview'";
   endif;
