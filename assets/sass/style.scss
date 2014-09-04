@@ -478,7 +478,7 @@ pre {
   background-color: #1d1f21;
   line-height: 1;
   color: #fff;
-  font-size: 13px;
+  font-size: 0.8em;
   position: relative;
   top: 0;
   -webkit-transition: box-shadow .3s, top .3s;
@@ -488,7 +488,6 @@ pre {
   transition: box-shadow .3s, top .15s;
 }
 pre:hover {
-  top: -3px;
   box-shadow: 0 3px 3px rgba(0,0,0,.3);
   -webkit-transition: box-shadow .3s, top .15s;
   -moz-transition: box-shadow .3s, top .15s;

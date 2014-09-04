@@ -117,6 +117,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/assets\/js\/vendor\/html5shiv.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/js\/vendor\/html5shiv.js",
+		"outputAbbreviatedPath": "\/assets\/js\/vendor\/html5shiv.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/assets\/js\/vendor\/modernizr.custom.68660.js": {
 		"fileType": 64,
 		"ignore": 1,
