@@ -48,7 +48,7 @@
         <ul>
           <li class="social-facebook"><a href="http://facebook.com/plasticmind">Jesse Gardner on Facebook</a></li>
           <li class="social-twitter"><a href="http://twitter.com/plasticmind">Jesse Gardner on Twitter</a></li>
-          <li class="social-feed"><a href="http://feeds.feedburner.com/plasticmind/blog">RSS Feeds</a></li>
+          <li class="social-feed"><a href="http://feeds.feedburner.com/plasticmind/">RSS Feed</a></li>
           <li class="social-email"><a href="http://plasticmind.com/contact/">Contact</a></li>
         </ul>
       </div>
