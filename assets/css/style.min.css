@@ -432,7 +432,8 @@ footer.site-footer {
     font-weight: normal;
     padding-top: 20px;
     font-size: 4em;
-    color: white; }
+    color: white;
+    margin: 0; }
   .home a {
     text-shadow: none; }
   .home .secondary,
