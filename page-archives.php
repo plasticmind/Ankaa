@@ -50,7 +50,7 @@ get_header(); ?>
 			<div id="archive-popular" class="archive-list">
 				<h3>Most Popular Posts:</h3>
 				<ul>
-					<?php wpfp_list_most_favorited(); ?>
+					<?php wpfp_list_most_favorited(10); ?>
 				</ul>
 			</div>
 
