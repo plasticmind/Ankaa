@@ -47,6 +47,13 @@ get_header(); ?>
 				</ul>
 			</div>
 
+			<div id="archive-popular" class="archive-list">
+				<h3>Most Popular Posts:</h3>
+				<ul>
+					<?php wpfp_list_most_favorited(); ?>
+				</ul>
+			</div>
+
 		</main>
 	</div>
 	<div class="secondary">
