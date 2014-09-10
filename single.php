@@ -103,7 +103,25 @@ get_header(); ?>
       ?>
     </nav>
 
-    <div class="entry-comments" id="comments"></div>
+    <div class="entry-comments" id="comments">
+            <div id="disqus_thread"></div>
+
+
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+              var disqus_shortname = 'plasticmindblog';
+              var disqus_identifier = '<?php echo $post->post_name;?>';
+              var disqus_url = '<?php the_permalink(); ?>';
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    </div>
     <div class="footer-widgets">
       <?php dynamic_sidebar('footer-widgets'); ?>
     </div>

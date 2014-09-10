@@ -25,3 +25,6 @@ require_once ( get_template_directory() . '/lib/tweaks.php' );
 // Custom template tags
 require_once ( get_template_directory() . '/lib/tags.php' );
 
+// Admin-related options
+require_once ( get_template_directory() . '/lib/admin.php' );
+
