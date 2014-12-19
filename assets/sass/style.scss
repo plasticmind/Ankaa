@@ -504,6 +504,23 @@ pre code {
   overflow: auto;
 }
 
+.simple-footnote {
+position: relative;
+top: -10px;
+left: -3px;
+background-image: none;
+font-size: 80%;
+}
+.simple-footnotes {
+  font-size: 90%;
+  .notes {
+    font-weight: bold;
+  }
+  li {
+    margin-bottom: 1em;
+  }
+}
+
 /* = POST TYPES */
 
 .format-quote .entry-content {

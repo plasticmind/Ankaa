@@ -548,6 +548,20 @@ pre code {
   padding-left: 10px;
   overflow: auto; }
 
+.simple-footnote {
+  position: relative;
+  top: -10px;
+  left: -3px;
+  background-image: none;
+  font-size: 80%; }
+
+.simple-footnotes {
+  font-size: 90%; }
+  .simple-footnotes .notes {
+    font-weight: bold; }
+  .simple-footnotes li {
+    margin-bottom: 1em; }
+
 /* = POST TYPES */
 .format-quote .entry-content {
   margin-top: 2em;
