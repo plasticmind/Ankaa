@@ -26,6 +26,10 @@ get_header(); ?>
       elseif(is_author()):
         $curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug', $author_name ) : get_userdata( intval($author ) );
         $page_title = 'Author: <em>' . $curauth->nickname . '</em>';
+      elseif(is_tax()):
+        $tax = get_query_var( 'taxonomy' );
+        $term = get_term_by( 'slug', get_query_var( 'term' ), $tax );
+        $page_title = $tax ": " . $term->name;
       else:
         $page_title = "Archives";
       endif;
