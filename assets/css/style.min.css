@@ -286,11 +286,11 @@ footer.site-footer {
   background-color: transparent; }
   .home .site-header nav a {
     color: white;
-    border-color: #555; }
+    border-color: rgba(255, 255, 255, 0.1); }
 
 .home header.expanded #site-search,
 .home .expanded #brand a {
-  border-color: #555; }
+  border-color: rgba(255, 255, 255, 0.1); }
 
 .home #nav-toggle {
   background-color: transparent; }
@@ -1348,7 +1348,9 @@ div.controls a:hover {
     height: 32px;
     padding: 12px 65px 12px 12px;
     margin-right: 57px;
-    border-right: 0; }
+    border-right: 0;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1); }
 
   #site-nav {
     display: none;
@@ -1370,6 +1372,8 @@ div.controls a:hover {
     border-left: 0;
     background-color: #363433;
     transition: background .2s; }
+    .home #nav-toggle {
+      background-color: transparent; }
 
   #nav-toggle:hover {
     background-color: #566462;

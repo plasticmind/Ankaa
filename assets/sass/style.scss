@@ -226,12 +226,12 @@ font-size: 1.1em;
   background-color: transparent;
   a {
     color: white;
-    border-color: #555;
+    border-color: rgba(255,255,255,.1);
   }
 }
 .home header.expanded #site-search,
 .home .expanded #brand a {
-  border-color: #555;
+  border-color: rgba(255,255,255,.1);
 }
 .home #nav-toggle {
   background-color: transparent;
@@ -1380,6 +1380,8 @@ display: block;
     padding: 12px 65px 12px 12px;
     margin-right: 57px;
     border-right: 0;
+    border:none;
+    background-color: rgba(255,255,255,.1);
   }
   #site-nav {
     display: none;
@@ -1399,9 +1401,12 @@ display: block;
     right: 0;
     display: block;
     border-left: 0;
-background-color: #363433;
+    background-color: #363433;
     transition:
-      background .2s;
+    background .2s;
+    .home & {
+      background-color: transparent;
+    }
   }
   #nav-toggle:hover {
     background-color: #566462;
