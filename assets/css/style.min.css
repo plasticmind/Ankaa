@@ -292,9 +292,6 @@ footer.site-footer {
 .home .expanded #brand a {
   border-color: rgba(255, 255, 255, 0.1); }
 
-.home #nav-toggle {
-  background-color: rgba(255, 255, 255, 0.1); }
-
 .home #brand a {
   background-color: rgba(255, 255, 255, 0.1);
   color: white; }
@@ -1374,7 +1371,7 @@ div.controls a:hover {
     background-color: #363433;
     transition: background .2s; }
     .home #nav-toggle {
-      background-color: transparent; }
+      background-color: rgba(255, 255, 255, 0.1); }
 
   #nav-toggle:hover {
     background-color: #566462;

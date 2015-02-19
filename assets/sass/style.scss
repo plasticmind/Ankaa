@@ -233,9 +233,6 @@ font-size: 1.1em;
 .home .expanded #brand a {
   border-color: rgba(255,255,255,.1);
 }
-.home #nav-toggle {
-  background-color: rgba(255,255,255,.1);
-}
 .home #brand a {
   background-color: rgba(255,255,255,.1);
   color: white;
@@ -1406,7 +1403,7 @@ display: block;
     transition:
     background .2s;
     .home & {
-      background-color: transparent;
+      background-color: rgba(255,255,255,.1);
     }
   }
   #nav-toggle:hover {
