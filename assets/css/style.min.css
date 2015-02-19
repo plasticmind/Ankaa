@@ -283,7 +283,7 @@ footer.site-footer {
 
 /* = Home Page */
 .home .site-header nav {
-  color: transparent; }
+  background-color: transparent; }
   .home .site-header nav a {
     color: white;
     border-color: #555; }
@@ -294,6 +294,9 @@ footer.site-footer {
 
 .home #nav-toggle {
   background-color: transparent; }
+
+.home #brand a {
+  color: white; }
 
 /* = NAV */
 .site-header nav {

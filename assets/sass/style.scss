@@ -223,7 +223,7 @@ font-size: 1.1em;
 /* = Home Page */
 
 .home .site-header nav {
-  color: transparent;
+  background-color: transparent;
   a {
     color: white;
     border-color: #555;
@@ -235,6 +235,9 @@ font-size: 1.1em;
 }
 .home #nav-toggle {
   background-color: transparent;
+}
+.home #brand a {
+  color: white;
 }
 
 /* = NAV */
