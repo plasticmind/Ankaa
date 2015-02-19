@@ -233,8 +233,11 @@ font-size: 1.1em;
 .home .expanded #brand a {
   border-color: rgba(255,255,255,.1);
 }
-.home #brand a {
+.home #nav-toggle {
   background-color: rgba(255,255,255,.1);
+}
+.home #brand a {
+  background-color: transparent;
   color: white;
 }
 
@@ -1379,7 +1382,9 @@ display: block;
     margin-right: 57px;
     border-right: 0;
     border:none;
-    background-color: rgba(255,255,255,.1);
+    .home & {
+      background-color: rgba(255,255,255,.1);
+    }
   }
   #site-nav {
     display: none;

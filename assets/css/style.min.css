@@ -292,8 +292,11 @@ footer.site-footer {
 .home .expanded #brand a {
   border-color: rgba(255, 255, 255, 0.1); }
 
+.home #nav-toggle {
+  background-color: rgba(255, 255, 255, 0.1); }
+
 .home #brand a {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: transparent;
   color: white; }
 
 /* = NAV */
@@ -1347,8 +1350,9 @@ div.controls a:hover {
     padding: 12px 65px 12px 12px;
     margin-right: 57px;
     border-right: 0;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.1); }
+    border: none; }
+    .home #brand a {
+      background-color: rgba(255, 255, 255, 0.1); }
 
   #site-nav {
     display: none;
