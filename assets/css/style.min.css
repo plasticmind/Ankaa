@@ -1310,7 +1310,7 @@ div.controls a:hover {
   #site-nav {
     display: block !important; }
 
-  #social-links {
+  .expanded #social-links {
     display: block !important; } }
 @media all and (max-width: 850px) {
   /* Target: Tablet & Mobile */

@@ -355,7 +355,7 @@ $li-max-height: 100px;
   display: none;
   position: absolute;
   bottom: -52px;
-    transition: bottom .3s;
+  transition: bottom .3s;
 }
 #social-links ul {
 list-style: none;
@@ -1338,7 +1338,7 @@ div.controls a:hover {
   #site-nav {
     display: block !important;
   }
-  #social-links {
+  .expanded #social-links {
     display: block !important;
   }
 }
