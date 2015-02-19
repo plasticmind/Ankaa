@@ -281,6 +281,20 @@ footer.site-footer {
         color: rgba(30, 28, 26, 0.9);
         text-shadow: none; }
 
+/* = Home Page */
+.home .site-header nav {
+  color: transparent; }
+  .home .site-header nav a {
+    color: white;
+    border-color: #555; }
+
+.home header.expanded #site-search,
+.home .expanded #brand a {
+  border-color: #555; }
+
+.home #nav-toggle {
+  background-color: transparent; }
+
 /* = NAV */
 .site-header nav {
   opacity: .7;

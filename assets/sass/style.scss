@@ -220,6 +220,23 @@ font-size: 1.1em;
   }
 }
 
+/* = Home Page */
+
+.home .site-header nav {
+  color: transparent;
+  a {
+    color: white;
+    border-color: #555;
+  }
+}
+.home header.expanded #site-search,
+.home .expanded #brand a {
+  border-color: #555;
+}
+.home #nav-toggle {
+  background-color: transparent;
+}
+
 /* = NAV */
 
 $li-max-height: 100px;
