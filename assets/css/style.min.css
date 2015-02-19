@@ -271,6 +271,15 @@ footer.site-footer {
       background-color: #ed0;
       color: black;
       text-shadow: none; }
+    .expanded #brand a {
+      background: transparent;
+      color: rgba(30, 28, 26, 0.9);
+      text-shadow: none;
+      border-bottom: solid 1px #ddd; }
+      .expanded #brand a:hover {
+        background-color: #ed0;
+        color: rgba(30, 28, 26, 0.9);
+        text-shadow: none; }
 
 /* = NAV */
 .site-header nav {

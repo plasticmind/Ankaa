@@ -201,12 +201,23 @@ font-size: 1.1em;
 /* = BRAND */
 
 #brand {
-    text-align: center;
-    a {
-      @include brand-box;
-      font-size: 21px;
-      letter-spacing: 1px;
+  text-align: center;
+  a {
+    @include brand-box;
+    font-size: 21px;
+    letter-spacing: 1px;
+    .expanded & {
+      background: transparent;
+      color: $text-color;
+      text-shadow: none;
+      border-bottom: solid 1px #ddd;
+      &:hover {
+        background-color: $brand-yellow;
+        color: $text-color;
+        text-shadow: none;
+      }
     }
+  }
 }
 
 /* = NAV */
