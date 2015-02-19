@@ -1352,7 +1352,8 @@ div.controls a:hover {
     border-right: 0;
     border: none; }
     .home #brand a {
-      background-color: rgba(255, 255, 255, 0.1); }
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none; }
 
   #site-nav {
     display: none;
