@@ -448,7 +448,7 @@ footer.site-footer {
 
 /* HOME ------------------------------ */
 .home {
-  background: #202528 url(/wp-content/themes/ankaa/assets/i/photos/bokeh.jpg) center fixed no-repeat;
+  background: #202528 url(/wp-content/themes/ankaa/assets/i/photos/bokeh.jpg) top fixed no-repeat;
   background-size: cover; }
   .home .content {
     color: white;
