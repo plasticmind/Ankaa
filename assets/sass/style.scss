@@ -417,7 +417,6 @@ text-align: center;
     line-height: 1;
     background:  $svg-logo center center no-repeat;
     //text-shadow: 0 0 10px rgba(0,0,0,.5);
-
   }
   a {
     text-shadow: none;
@@ -1389,10 +1388,6 @@ display: block;
     margin-right: 57px;
     border-right: 0;
     border:none;
-    .home & {
-      background-color: rgba(255,255,255,.1);
-      border: none;
-    }
   }
   #site-nav {
     display: none;
@@ -1415,9 +1410,6 @@ display: block;
     background-color: #363433;
     transition:
     background .2s;
-    .home & {
-      background-color: rgba(255,255,255,.1);
-    }
   }
   #nav-toggle:hover {
     background-color: #566462;
@@ -1490,6 +1482,9 @@ font-size: 16px;
 }
 #archive-chart li.diminish a {
 font-size: 13px;
+}
+.home .entry-header {
+    padding: 20px 0;
 }
 }
 

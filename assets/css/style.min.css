@@ -1351,9 +1351,6 @@ div.controls a:hover {
     margin-right: 57px;
     border-right: 0;
     border: none; }
-    .home #brand a {
-      background-color: rgba(255, 255, 255, 0.1);
-      border: none; }
 
   #site-nav {
     display: none;
@@ -1375,8 +1372,6 @@ div.controls a:hover {
     border-left: 0;
     background-color: #363433;
     transition: background .2s; }
-    .home #nav-toggle {
-      background-color: rgba(255, 255, 255, 0.1); }
 
   #nav-toggle:hover {
     background-color: #566462;
@@ -1451,7 +1446,10 @@ div.controls a:hover {
     font-size: 16px; }
 
   #archive-chart li.diminish a {
-    font-size: 13px; } }
+    font-size: 13px; }
+
+  .home .entry-header {
+    padding: 20px 0; } }
 @media all and (max-width: 580px) {
   /* Target: Mobile */
   .footer-widgets .widget {
