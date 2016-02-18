@@ -435,12 +435,15 @@ text-align: center;
 .connect-byline a {
   @include brand-box;
   display: inline-block;
-  background: transparent;
-  margin-left: 1em;
-  opacity: 0.3;
-  color: white;
+  background: $pm-light-gray;
+  margin-right: 1em;
+  opacity: 0.8;
+  color: $pm-dark-gray;
   padding: 0 10px;
+  font-family: $sans;
+  font-style: normal;
   font-weight: normal;
+  text-shadow: none;
   @include transition(all 0.25s);
   &:hover {
     background-color: $brand-yellow;

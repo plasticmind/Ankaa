@@ -471,12 +471,15 @@ footer.site-footer {
   transition: background-color .2s, border .2s, color .2s;
   background-image: none;
   display: inline-block;
-  background: transparent;
-  margin-left: 1em;
-  opacity: 0.3;
-  color: white;
+  background: #F1F2F2;
+  margin-right: 1em;
+  opacity: 0.8;
+  color: #231F20;
   padding: 0 10px;
+  font-family: "Proxima Nova", "proxima-nova", sans-serif;
+  font-style: normal;
   font-weight: normal;
+  text-shadow: none;
   -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;
   transition: all 0.25s; }
