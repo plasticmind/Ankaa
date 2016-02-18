@@ -16,7 +16,7 @@ get_header(); ?>
           <?php $image_data = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "full" ); ?>
           <?php $image_class = ($image_data[1]>700) ? ' full-size ultra-wide' : ''; ?>
 
-          <div class="entry-featuredimage<?php echo $image_class; ?>">
+          <div class="entry-featuredimage">
             <?php the_post_thumbnail( array( 999, 999 ), array( 'itemprop' => 'image' ) ); ?> 
           </div>
 
@@ -30,8 +30,6 @@ get_header(); ?>
 
         <div class="entry-content">
 
-          <?php $subtitle = get_post_meta( $post->ID, 'pm_subtitle', true ); ?>
-          <?php echo (!empty($subtitle)) ? '<div class="entry-subtitle">'.apply_filters('the_content',$subtitle).'</div>' : ''; ?>        
           <?php the_content(); ?>
 
         </div>

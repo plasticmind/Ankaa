@@ -282,23 +282,6 @@ footer.site-footer {
         text-shadow: none; }
 
 /* = Home Page */
-.home .site-header nav {
-  background-color: transparent; }
-  .home .site-header nav a {
-    color: white;
-    border-color: rgba(255, 255, 255, 0.1); }
-
-.home header.expanded #site-search,
-.home .expanded #brand a {
-  border-color: rgba(255, 255, 255, 0.1); }
-
-.home #nav-toggle {
-  background-color: rgba(255, 255, 255, 0.1); }
-
-.home #brand a {
-  background-color: transparent;
-  color: white; }
-
 /* = NAV */
 .site-header nav {
   opacity: .7;
@@ -364,8 +347,7 @@ footer.site-footer {
     width: 138px;
     margin: 7px 5px;
     padding: 6px;
-    border-radius: 4px;
-    background-position: center !important; }
+    border-radius: 4px; }
   #site-search .field:focus {
     box-shadow: 0 0 5px rgba(111, 100, 125, 0.7); }
   #site-search p a {
@@ -448,21 +430,32 @@ footer.site-footer {
 
 /* HOME ------------------------------ */
 .home {
-  background: #202528 url(/wp-content/themes/ankaa/assets/i/photos/bokeh.jpg) top fixed no-repeat;
-  background-size: cover; }
+  background: white; }
   .home .content {
-    color: white;
+    color: #231F20;
     background: none;
     text-align: center; }
+  .home .entry-header {
+    color: #231F20;
+    font-family: "Proxima Nova", "proxima-nova", sans-serif;
+    font-weight: bold;
+    padding: 20px;
+    margin: 0 0 0 0;
+    text-transform: uppercase;
+    text-indent: -999em;
+    background-color: #F1F2F2; }
   .home .entry-title {
-    font-family: "freight-text-pro", Georgia, sans-serif;
-    font-weight: normal;
-    padding-top: 20px;
-    font-size: 4em;
-    color: white;
-    margin: 0; }
+    font-size: 2.5em;
+    padding: 0;
+    margin: 0 0.5em;
+    line-height: 1;
+    background: url(/wp-content/themes/ankaa/assets/i/svg/logo-full.svg) center center no-repeat; }
   .home a {
     text-shadow: none; }
+  .home .entry-content {
+    font-size: 1.3em;
+    text-align: left;
+    font-style: italic; }
   .home .secondary,
   .home .site-footer {
     display: none; }
