@@ -1148,9 +1148,7 @@ position: absolute;
 #action-bar {
   margin-bottom: 80px;
 }
-#disqus_thread {
-    display: none;
-}
+
 #activate-comments {
     text-shadow: 0 -1px 0 rgba(0,0,0,.3);
   cursor: pointer;
@@ -1174,6 +1172,10 @@ display: block;
 }
 #activate-comments a:hover {
 background-color: rgba(76,84,82,.9);
+}
+
+.entry-comments {
+  margin: 60px 0;
 }
 
 /* Action: Edit Link */
