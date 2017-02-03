@@ -466,14 +466,16 @@ footer.site-footer {
   padding: 8px;
   font-weight: bold;
   color: #fff;
+  background-color: rgba(34, 32, 31, 0.9);
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
   transition: background-color .2s, border .2s, color .2s;
   background-image: none;
   display: inline-block;
-
+  background: #F1F2F2;
   margin-right: 1em;
   opacity: 0.8;
   color: #231F20;
-  padding: 0;
+  padding: 10px;
   font-family: "Proxima Nova", "proxima-nova", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -482,7 +484,7 @@ footer.site-footer {
   -moz-transition: all 0.25s;
   transition: all 0.25s; }
   .connect-byline a:hover {
-    
+    background-color: #ed0;
     color: black;
     text-shadow: none; }
   .connect-byline a:hover {
