@@ -7,6 +7,7 @@ add_action('wp_enqueue_scripts', 'pm_load_scripts');
 function pm_load_scripts() {
   if (!is_admin()) {
     // Styles
+    wp_enqueue_style( 'font-awesome', get_template_directory_uri().'/assets/css/font-awesome.min.css', null, null );
   	wp_enqueue_style( 'pm-style', get_template_directory_uri().'/assets/css/style.min.css', null, pm_version_hash('/assets/css/style.min.css') );
     // Scripts
     wp_deregister_script('jquery');
@@ -18,6 +19,7 @@ function pm_load_scripts() {
     wp_enqueue_script( 'wp-favorite-posts', plugins_url() . '/wp-favorite-posts/wpfp.js', array('jquery-remote'), null, true );
     wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr.custom.68660.js', array(), null, true );
     wp_enqueue_script( 'mint', 'http://plasticmind.com/mint/?js', array(), null, true );
+
   }
 }
 
