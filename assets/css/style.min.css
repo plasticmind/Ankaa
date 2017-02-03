@@ -482,7 +482,14 @@ footer.site-footer {
   text-shadow: none;
   -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;
-  transition: all 0.25s; }
+  transition: all 0.25s;
+  border-radius: 50%;
+height: 70px;
+width: 70px;
+   }
+   .connect-byline i {
+    line-height: 70px;
+   }
   .connect-byline a:hover {
     background-color: #ed0;
     color: black;
