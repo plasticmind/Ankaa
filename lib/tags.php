@@ -62,7 +62,7 @@ function pm_content_nav( $nav_id=null ) {
 
   ?>
   <nav role="navigation" id="<?php echo $nav_id; ?>" class="<?php echo $nav_class; ?>">
-    <div class="assistive-text"><?php _e( 'Post navigation', 'sr' ); ?></div>
+    <div class="assistive-text">Post navigation</div>
 
   <?php if ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
@@ -79,14 +79,14 @@ function pm_content_nav( $nav_id=null ) {
   </nav><!-- #<?php echo $nav_id; ?> -->
   <?php
 }
-endif; // sr_content_nav
+endif;
 
 
 
 /* = NAVIGATION: Display navigation to next/previous pages when applicable */
 
-if ( ! function_exists( 'sr_content_nav' ) ):
-function sr_content_nav( $nav_id ) {
+if ( ! function_exists( 'pm_content_nav' ) ):
+function pm_content_nav( $nav_id ) {
   global $wp_query;
 
   $nav_class = 'site-navigation paging-navigation';
@@ -121,7 +121,4 @@ function sr_content_nav( $nav_id ) {
   </nav><!-- #<?php echo $nav_id; ?> -->
   <?php
 }
-endif; // sr_content_nav
-
-add_filter('next_posts_link_attributes', 'sr_posts_link_nofollow');
-add_filter('previous_posts_link_attributes', 'sr_posts_link_nofollow');
+endif;
