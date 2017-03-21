@@ -58,7 +58,7 @@ get_header(); ?>
         </div>
 
         <footer class="entry-meta">
-          <?php wpfp_link() ?>
+          <?php //wpfp_link() ?>
           <?php pm_entry_byline(); ?>
           <?php echo pm_get_cats_and_tags_list(); ?>
         </footer>
