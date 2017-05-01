@@ -80,11 +80,9 @@ $(document).ready(function() {
 
 	// EXPAND NAV WHEN SCROLLING PAST FULL IMAGE
 
-$('.site-header').addClass('expanded');
-/*
 	var img_height = $('.entry-featuredimage.ultra-wide img').height();
 	if ($(this).scrollTop() >= img_height) {
-		
+		$('.site-header').addClass('expanded');
 	}
 	$(window).scroll(function() {
 		delay(function(){
@@ -108,5 +106,5 @@ $('.site-header').addClass('expanded');
 	    timer = setTimeout(callback, ms);
 	  };
 	})();
-*/
+
 });
