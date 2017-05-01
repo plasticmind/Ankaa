@@ -1,6 +1,3 @@
-// FastClick function - https://github.com/dave1010/jquery-fast-click
-(function(e){e.fn.fastClick=function(t){return e(this).each(function(){e.FastButton(e(this)[0],t)})};e.FastButton=function(t,n){var r,i;var s=function(){e(t).unbind("touchend");e("body").unbind("touchmove.fastClick")};var o=function(t){t.stopPropagation();s();n.call(this,t);if(t.type==="touchend"){e.clickbuster.preventGhostClick(r,i)}};var u=function(e){if(Math.abs(e.originalEvent.touches[0].clientX-r)>10||Math.abs(e.originalEvent.touches[0].clientY-i)>10){s()}};var a=function(n){n.stopPropagation();e(t).bind("touchend",o);e("body").bind("touchmove.fastClick",u);r=n.originalEvent.touches[0].clientX;i=n.originalEvent.touches[0].clientY};e(t).bind({touchstart:a,click:o})};e.clickbuster={coordinates:[],preventGhostClick:function(t,n){e.clickbuster.coordinates.push(t,n);window.setTimeout(e.clickbuster.pop,2500)},pop:function(){e.clickbuster.coordinates.splice(0,2)},onClick:function(t){var n,r,i;for(i=0;i<e.clickbuster.coordinates.length;i+=2){n=e.clickbuster.coordinates[i];r=e.clickbuster.coordinates[i+1];if(Math.abs(t.clientX-n)<25&&Math.abs(t.clientY-r)<25){t.stopPropagation();t.preventDefault()}}}};e(function(){if(document.addEventListener){document.addEventListener("click",e.clickbuster.onClick,true)}else if(document.attachEvent){document.attachEvent("onclick",e.clickbuster.onClick)}})})(jQuery)
-
 // Our custom stuff
 
 $(document).ready(function() {
@@ -9,7 +6,7 @@ $(document).ready(function() {
 	$('img').parent('.entry-content a').css("background-image", "none");
 
 	// NAV
-	$("#nav-toggle").fastClick(function(event){
+	$( "#nav-toggle" ).on( "click", function(event) {
 		event.preventDefault();
 		$(this).toggleClass('active');
 		$('#site-nav').toggleClass('open').slideToggle('fast');
@@ -32,7 +29,7 @@ $(document).ready(function() {
     });
 
 	// SEARCH
-	$("#nav-search").fastClick(function(event){
+	$("#nav-search").on( "click", function(event){
 		event.preventDefault();
 		$(this).toggleClass('active');
 		$('#site-search').slideToggle('fast').toggleClass('open');
@@ -40,7 +37,7 @@ $(document).ready(function() {
 	});
 
 	// SHARE
-	$("#share-icon").fastClick(function(){
+	$("#share-icon").on( "click", function(){
 		$(this).parent().toggleClass('active');
 		_gaq.push(['_trackEvent', 'Mobile', 'Search Form Toggled']);
 	});
