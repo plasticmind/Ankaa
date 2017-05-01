@@ -486,6 +486,7 @@ footer.site-footer {
   border-radius: 50%;
 height: 70px;
 width: 70px;
+text-align: center;
    }
    .connect-byline i {
     line-height: 70px;
