@@ -55,7 +55,7 @@ $(document).ready(function() {
 		script.src='http://' + disqus_shortname + '.disqus.com/count.js';
 		$("body").append(script);
 		// LOAD COMMENTS
-		$("#activate-comments").fastClick(function(event){
+		$("#activate-comments").on( "click", function(event){
 			event.preventDefault();
 			$(this).toggleClass('active');
 			$('#disqus_thread').toggle();
