@@ -1,5 +1,5 @@
 // Our custom stuff
-
+(function($) {
 $(document).ready(function() {
 
 	// Disable "faux underlines" on images
@@ -106,5 +106,5 @@ $(document).ready(function() {
 	    timer = setTimeout(callback, ms);
 	  };
 	})();
-
 });
+})(jQuery);
