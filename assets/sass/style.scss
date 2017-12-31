@@ -4,7 +4,7 @@
 /* ----------------------------------- */
 /* = Last update: 07.28.2014         = */
 
-@import 'bourbon/bourbon';
+@import 'bourbon';
 @import 'reset';
 @import '_images';
 
@@ -669,13 +669,13 @@ $fav-color: #fe0072;
       background-image: $svg-icon-heart-mask;
       background-color: $fav-color;
       transition: all .1s;
-    @include animation (pulsate 1s ease-out);
-    @include animation-iteration-count (infinite); 
+      animation: pulsate 1s ease-out;
+      animation-iteration-count: infinite; 
     }
   }
 }
 
-@include keyframes(pulse) {
+@keyframes pulsate {
     0% { transform: scale(0.1, 0.1); opacity: 0.0;}
     50% {opacity: 1.0;}
     100% { transform: scale(1.2, 1.2); opacity: 0.0;}
@@ -1181,14 +1181,22 @@ background-color: rgba(76,84,82,.9);
 
 /* Action: Edit Link */
 
-.edit-link {
+.edit-link a {
   float: right;
-  margin-top: 0.5em;
   opacity: 0.6;
   font-size: 0.8em;
   transition: all,.25s;
+  font-family: $sans;
+  border: solid 1px $brand-blue;
+  padding: 0.1em 0.5em 0;
+  border-radius: 3px;
+  display: block;
+  background-image: none !important;
+  text-shadow: none !important;
   &:hover {
     opacity: 1;
+    background-color: $brand-blue;
+    color: #fff;
   }
 }
 
@@ -1492,6 +1500,14 @@ font-size: 13px;
 }
 
 @media all and (max-width: 580px) {
+  .content { 
+    article {
+      font-size: 90%;
+    }
+    .entry-title {
+      font-size: 28px;
+    }
+  }
   /* Target: Mobile */
   .footer-widgets .widget {
     float: none;

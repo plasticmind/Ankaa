@@ -27,6 +27,16 @@
 		"oAP": "\/archive.php",
 		"oF": 0
 		},
+	"\/assets\/css\/font-awesome-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/font-awesome-min-min.css",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/assets\/css\/font-awesome.css": {
 		"aP": 1,
 		"bl": 0,
@@ -268,6 +278,15 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/assets\/js\/vendor\/html5shiv.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/vendor\/html5shiv.min.min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/assets\/js\/vendor\/modernizr.custom.68660.js": {
 		"ft": 64,
 		"mi": 1,
@@ -498,6 +517,12 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/build\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/build\/.gitignore",
+		"oF": 0
+		},
 	"\/footer.php": {
 		"ft": 8192,
 		"oA": 0,
@@ -616,6 +641,16 @@
 		"oA": 0,
 		"oAP": "\/single.php",
 		"oF": 0
+		},
+	"\/style-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/style-min-min.css",
+		"oF": 0,
+		"oS": 0
 		},
 	"\/style.css": {
 		"aP": 1,
