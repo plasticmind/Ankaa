@@ -4,9 +4,10 @@
 /* ----------------------------------- */
 /* = Last update: 07.28.2014         = */
 
-@import 'bourbon';
+
 @import 'reset';
 @import '_images';
+@import 'hamburgers/hamburgers';
 
 $pm-dark-gray: #231F20;
 $pm-light-gray: #F1F2F2;
@@ -91,6 +92,7 @@ a:hover {
 #site-search .field {
 color: $text-color;
 }
+.content h2,
 .content h3 {
 color: $text-color;
 }
@@ -233,7 +235,7 @@ $li-max-height: 100px;
 
 .site-header {
   nav {
-    opacity: .7;
+    opacity: 0.7;
     border-top: 0;
     transition: opacity .4s;
     background: rgba(255,255,255,.9);
@@ -253,9 +255,6 @@ $li-max-height: 100px;
       .touch & {
         max-height: $li-max-height;
         display: block;
-      }
-      &:first-child a {
-        border: none;
       }
       &.current-menu-item,
       &.active {
@@ -292,10 +291,9 @@ $li-max-height: 100px;
 }
 
 /*! RESPONSIVE NAV */
-#nav-toggle {
+.hamburger {
   display: none;
 }
-
 
 /* = SITE SEARCH */
 #site-search {
@@ -575,7 +573,7 @@ margin: 0 -40px 35px;
 content: " ";
     display:block;
     position: relative;
-    top:-17px;
+    top:-16px;
     height:7px;
     background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAAhklEQVQY02NkYGBkYoAARgYE+A9jsAAxM1SSEUnRP5gikAI2IGaCYkaoxD8oBgtyAjHXtGlTNb9//7b76NEjrkA+N0gMKscov2rVqsA/f/68/g8E//79+3Xu3LlikDgQyzHs378/++/fv9/+o4J/t2/fnszGxq7BCNTxl5ER7hMU8OXLlysAEW1BT3IkEq8AAAAASUVORK5CIIA=);
     }
@@ -1353,6 +1351,7 @@ div.controls a:hover {
 /* RESPONSIVE ------------------------ */
 
 @media all and (min-width: 851px) {
+  .site-header nav li:first-child a {border: none;}
   #site-nav {
     display: block !important;
   }
@@ -1363,6 +1362,14 @@ div.controls a:hover {
 
 @media all and (max-width: 850px) {
   /* Target: Tablet & Mobile */
+  .content { 
+    article {
+      font-size: 90%;
+    }
+    .entry-title {
+      font-size: 28px;
+    }
+  }
   .content,
   .secondary,
   .site-header,
@@ -1391,42 +1398,51 @@ display: block;
   }
   #brand {
     text-align: left;
+    a {
+      font-size: 32px;
+      height: 32px;
+      padding: 12px 65px 12px 12px;
+      margin-right: 57px;
+      border-right: 0;
+      border:none;
+      background-color: transparent;
+      color: $text-color;
+      text-shadow: none;
+    }
   }
-  #brand a {
-    font-size: 32px;
-    height: 32px;
-    padding: 12px 65px 12px 12px;
-    margin-right: 57px;
-    border-right: 0;
-    border:none;
+  .site-header nav li {
+    max-height: $li-max-height;
+    display: block;
   }
   #site-nav {
     display: none;
   opacity: 1;
+
   }
   #site-nav li a {
   font-size: 17px;
   }
-  #nav-toggle {
-    cursor: pointer;
-    height: 56px;
-    width: 57px;
-    background: transparent url(http://plasticmind.com/i/nova/burger.png) center center no-repeat;
+  .hamburger {
     position: absolute;
-    text-indent: -999em;
     top: 0;
     right: 0;
+    height: 56px;
     display: block;
     border-left: 0;
-    background-color: #363433;
+    background-color: white;
     transition:
     background .2s;
-  }
-  #nav-toggle:hover {
-    background-color: #566462;
-    transition:
+    outline: none;
+    opacity: 1;
+    &:hover {
+      background-color: $brand-yellow;
+      color: black;
+      text-shadow: none;   
+      transition:
       border .3s,
       background .3s;
+      opacity: 1;
+    }
   }
   #site-search .field {
   width: 75%;
@@ -1443,7 +1459,7 @@ display: block;
   .site-header:hover #social-links {
     position: absolute;
     top: 2px;
-    right: 60px;
+    right: 65px;
   }
   #social-links li a {
   opacity: .8;
@@ -1500,14 +1516,6 @@ font-size: 13px;
 }
 
 @media all and (max-width: 580px) {
-  .content { 
-    article {
-      font-size: 90%;
-    }
-    .entry-title {
-      font-size: 28px;
-    }
-  }
   /* Target: Mobile */
   .footer-widgets .widget {
     float: none;
@@ -1624,11 +1632,6 @@ font-size: 10px;
 
   body, #brand, nav, nav li.active {
     background-size: 250px 250px;
-  }
-
-  #nav-toggle {
-    background-image: url(http://plasticmind.com/i/nova/burger-2x.png);
-    background-size: 32px 32px;
   }
   .full-size:after {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAANCAYAAACgu+4kAAABPUlEQVQ4y52PP0vDUBTF362pRnFQHBRJBaOSChZEB1GHOupUv0CXulfQxTV7FgfHrJldA/kC+hmq3bK0gUCIJZDkeZO86G1Q/HPgx32575wTHrAPAbBpld/8c8U5+9qUh4GEqmWcTE6L0Ag1EqZnmA7lpGTmkkhwpjLLgpSQkHBWBJIoqYkpiYKyhJFQLM7lzJ+RmerInEBGFjRNWxqPRw/D4eudLMuLuJsXzBLqAlhB1pANZLvTuTzyff+ZC7mu+6gojRbebSENZFVklguKpYrs9vvX52EYvvCKPM97arfPjtGjIZuIgqwXMGgiLcMwulEUefwbBUEw6PWuLtC7J4p2ChgcWpZ1E8fxG/9Bk8lkpOt6FzMHyH6O4zhGmqYJ/6XwR6FpmrcYPkFOIVuyPwojiW3b96qqNv9VQPUOeXLj5YWTE94AAAAASUVORK5CIIA=);
