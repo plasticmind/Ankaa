@@ -1960,6 +1960,8 @@ div.controls a:hover {
 
 @media all and (max-width: 850px) {
   /* Target: Tablet & Mobile */
+  #container {
+    margin: 0 !important; }
   .content article {
     font-size: 90%; }
   .content .entry-title {
@@ -2089,8 +2091,6 @@ div.controls a:hover {
 
 @media all and (max-width: 520px) {
   /* Target: Mobile */
-  #container {
-    margin: 0; }
   .content,
   .secondary,
   .site-header,

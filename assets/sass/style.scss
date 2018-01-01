@@ -1333,6 +1333,10 @@ div.controls a:hover {
 
 @media all and (max-width: 850px) {
   /* Target: Tablet & Mobile */
+    #container {
+    margin: 0 !important;
+  }
+
   .content { 
     article {
       font-size: 90%;
@@ -1488,6 +1492,7 @@ font-size: 13px;
 
 @media all and (max-width: 580px) {
   /* Target: Mobile */
+
   .footer-widgets .widget {
     float: none;
     width: auto;
@@ -1504,9 +1509,6 @@ font-size: 13px;
 @media all and (max-width: 520px) {
   /* Target: Mobile */
 
-  #container {
-    margin: 0;
-  }
   .content,
   .secondary,
   .site-header,
