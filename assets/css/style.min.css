@@ -1123,6 +1123,8 @@ footer.site-footer {
     background: url(/wp-content/themes/ankaa/assets/i/svg/logo-full.svg) center center no-repeat; }
   .home a {
     text-shadow: none; }
+  .home .entry-content {
+    text-align: left; }
   .home .secondary,
   .home .site-footer {
     display: none; }

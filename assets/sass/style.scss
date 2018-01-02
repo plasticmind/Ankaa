@@ -390,7 +390,9 @@ text-align: center;
   a {
     text-shadow: none;
   }
-
+  .entry-content {
+    text-align: left;
+  }
   .secondary,
   .site-footer {
     display: none;
