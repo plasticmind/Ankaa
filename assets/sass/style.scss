@@ -4,9 +4,10 @@
 /* ----------------------------------- */
 /* = Last update: 07.28.2014         = */
 
-@import 'bourbon/bourbon';
+
 @import 'reset';
 @import '_images';
+@import 'hamburgers/hamburgers';
 
 $pm-dark-gray: #231F20;
 $pm-light-gray: #F1F2F2;
@@ -91,6 +92,7 @@ a:hover {
 #site-search .field {
 color: $text-color;
 }
+.content h2,
 .content h3 {
 color: $text-color;
 }
@@ -195,7 +197,7 @@ font-size: 1.1em;
 
 .site-header {
   z-index: 100;
-  @include transition(opacity 0.3s);
+  transition: opacity 0.3s;
 }
 .site-header a {
   text-decoration: none;
@@ -233,7 +235,7 @@ $li-max-height: 100px;
 
 .site-header {
   nav {
-    opacity: .7;
+    opacity: 0.7;
     border-top: 0;
     transition: opacity .4s;
     background: rgba(255,255,255,.9);
@@ -244,18 +246,15 @@ $li-max-height: 100px;
     }
     li {
       //display:none;
-      max-height: 0; 
+      max-height: $li-max-height; 
       overflow: hidden;
       padding: 0;
       margin: 0;
       list-style: none;
-      @include transition(max-height 0.25s);
+      transition: max-height 0.25s;
       .touch & {
         max-height: $li-max-height;
         display: block;
-      }
-      &:first-child a {
-        border: none;
       }
       &.current-menu-item,
       &.active {
@@ -292,45 +291,15 @@ $li-max-height: 100px;
 }
 
 /*! RESPONSIVE NAV */
-#nav-toggle {
+.hamburger {
   display: none;
 }
 
-
-/* = SITE SEARCH */
-#site-search {
+.site-header.collapsed li {
   max-height: 0;
-  overflow: hidden;
-  @include transition(max-height 0.25s);
-  .field {
-    border: solid 1px #ddd;
-    width: 138px;
-    margin: 7px 5px;
-    padding: 6px;
-    border-radius: 4px;
-  }
-  .field:focus {
-    box-shadow: 0 0 5px rgba(111, 100, 125, .7);
-  }
-  p a {
-    margin-left: 2px;
-    background: none;
-    padding: 0;
-    text-transform: none;
-    font-size: 13px;
-  }
-  p a:hover {
-  text-decoration: underline;
-  }
-}
-
-.site-header:hover #site-search,
-.site-header.expanded #site-search,
-.site-header.expanded li {
-  max-height: $li-max-height;
 }
 .site-header:hover #site-search,
-.site-header.expanded #site-search {
+.site-header.collapsed #site-search {
   border-top: solid 1px #ddd;
 }
 
@@ -422,9 +391,7 @@ text-align: center;
     text-shadow: none;
   }
   .entry-content {
-    font-size: 1.3em;
     text-align: left;
-    font-style: italic;
   }
   .secondary,
   .site-footer {
@@ -443,7 +410,8 @@ text-align: center;
   font-style: normal;
   font-weight: normal;
   text-shadow: none;
-  @include transition(all 0.25s);
+  text-align: center;
+  transition: all 0.25s;
   &:hover {
     background-color: $brand-yellow;
     opacity: 1;
@@ -574,7 +542,7 @@ margin: 0 -40px 35px;
 content: " ";
     display:block;
     position: relative;
-    top:-17px;
+    top:-16px;
     height:7px;
     background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAAhklEQVQY02NkYGBkYoAARgYE+A9jsAAxM1SSEUnRP5gikAI2IGaCYkaoxD8oBgtyAjHXtGlTNb9//7b76NEjrkA+N0gMKscov2rVqsA/f/68/g8E//79+3Xu3LlikDgQyzHs378/++/fv9/+o4J/t2/fnszGxq7BCNTxl5ER7hMU8OXLlysAEW1BT3IkEq8AAAAASUVORK5CIIA=);
     }
@@ -656,28 +624,28 @@ $fav-color: #fe0072;
     background-image: $svg-icon-heart-mask;
     font-family: $sans;
     text-shadow: none;
-    @include transition(all 1s);
+    transition: all 1s;
     &.remove {
       background-color: $fav-color;
       &:hover {
         opacity: 0.5;
-        @include transition(all .1s);
+        transition: all .1s;
       }
     }
     &:hover {
       background-image: $svg-icon-heart-mask;
       background-color: $fav-color;
-      @include transition(all .1s);
-    @include animation (pulsate 1s ease-out);
-    @include animation-iteration-count (infinite); 
+      transition: all .1s;
+      animation: pulsate 1s ease-out;
+      animation-iteration-count: infinite; 
     }
   }
 }
 
-@include keyframes(pulse) {
-    0% { @include transform(scale(0.1, 0.1)); opacity: 0.0;}
+@keyframes pulsate {
+    0% { transform: scale(0.1, 0.1); opacity: 0.0;}
     50% {opacity: 1.0;}
-    100% { @include transform(scale(1.2, 1.2)); opacity: 0.0;}
+    100% { transform: scale(1.2, 1.2); opacity: 0.0;}
 }
 
 /* Meta: Next / Previous Links */
@@ -715,7 +683,7 @@ $nav-color: $brand-black;
     -webkit-tap-highlight-color: transparent; /* For some Androids */
     -webkit-user-select: none;
     -webkit-touch-callout: none; 
-    @include transition (all .25s);
+    transition: all .25s;
     &.without-image {
       background-image: $svg-placeholder;
     }
@@ -732,7 +700,7 @@ $nav-color: $brand-black;
   a + a:hover,
   a + a.hover-state {
     left: $nav-control-width;
-    //@include transform(translateX(-50px));
+    //transform: translateX(-50px);
     margin-left: 0;
     .entry-nav-control {
       left: 100%;
@@ -799,7 +767,7 @@ $nav-color: $brand-black;
   background: transparent no-repeat center;
   text-indent: -999em;
   z-index: 2;
-  @include transition (all .25s);
+  transition: all .25s;
   .collapsed & {
     background-color: $nav-color;
     background-color: rgba(0,0,0,0.5);
@@ -1180,14 +1148,22 @@ background-color: rgba(76,84,82,.9);
 
 /* Action: Edit Link */
 
-.edit-link {
+.edit-link a {
   float: right;
-  margin-top: 0.5em;
   opacity: 0.6;
   font-size: 0.8em;
-  @include transition(all,.25s);
+  transition: all,.25s;
+  font-family: $sans;
+  border: solid 1px $brand-blue;
+  padding: 0.1em 0.5em 0;
+  border-radius: 3px;
+  display: block;
+  background-image: none !important;
+  text-shadow: none !important;
   &:hover {
     opacity: 1;
+    background-color: $brand-blue;
+    color: #fff;
   }
 }
 
@@ -1211,7 +1187,7 @@ background-color: rgba(76,84,82,.9);
       a {
         display: block;
         padding: 0.5em 0;
-        @include transition(all 0.25s);
+        transition: all 0.25s;
         &:hover {
           padding: 0.5em;
           background-color: lighten($brand-black,75%); 
@@ -1344,6 +1320,7 @@ div.controls a:hover {
 /* RESPONSIVE ------------------------ */
 
 @media all and (min-width: 851px) {
+  .site-header nav li:first-child a {border: none;}
   #site-nav {
     display: block !important;
   }
@@ -1354,6 +1331,18 @@ div.controls a:hover {
 
 @media all and (max-width: 850px) {
   /* Target: Tablet & Mobile */
+    #container {
+    margin: 0 !important;
+  }
+
+  .content { 
+    article {
+      font-size: 90%;
+    }
+    .entry-title {
+      font-size: 28px;
+    }
+  }
   .content,
   .secondary,
   .site-header,
@@ -1382,42 +1371,51 @@ display: block;
   }
   #brand {
     text-align: left;
+    a {
+      font-size: 32px;
+      height: 32px;
+      padding: 12px 65px 12px 12px;
+      margin-right: 57px;
+      border-right: 0;
+      border:none;
+      background-color: transparent;
+      color: $text-color;
+      text-shadow: none;
+    }
   }
-  #brand a {
-    font-size: 32px;
-    height: 32px;
-    padding: 12px 65px 12px 12px;
-    margin-right: 57px;
-    border-right: 0;
-    border:none;
+  .site-header nav li {
+    max-height: $li-max-height;
+    display: block;
   }
   #site-nav {
     display: none;
   opacity: 1;
+
   }
   #site-nav li a {
   font-size: 17px;
   }
-  #nav-toggle {
-    cursor: pointer;
-    height: 56px;
-    width: 57px;
-    background: transparent url(http://plasticmind.com/i/nova/burger.png) center center no-repeat;
+  .hamburger {
     position: absolute;
-    text-indent: -999em;
     top: 0;
     right: 0;
+    height: 56px;
     display: block;
     border-left: 0;
-    background-color: #363433;
+    background-color: white;
     transition:
     background .2s;
-  }
-  #nav-toggle:hover {
-    background-color: #566462;
-    transition:
+    outline: none;
+    opacity: 1;
+    &:hover {
+      background-color: $brand-yellow;
+      color: black;
+      text-shadow: none;   
+      transition:
       border .3s,
       background .3s;
+      opacity: 1;
+    }
   }
   #site-search .field {
   width: 75%;
@@ -1434,7 +1432,7 @@ display: block;
   .site-header:hover #social-links {
     position: absolute;
     top: 2px;
-    right: 60px;
+    right: 65px;
   }
   #social-links li a {
   opacity: .8;
@@ -1492,6 +1490,7 @@ font-size: 13px;
 
 @media all and (max-width: 580px) {
   /* Target: Mobile */
+
   .footer-widgets .widget {
     float: none;
     width: auto;
@@ -1508,9 +1507,6 @@ font-size: 13px;
 @media all and (max-width: 520px) {
   /* Target: Mobile */
 
-  #container {
-    margin: 0;
-  }
   .content,
   .secondary,
   .site-header,
@@ -1607,11 +1603,6 @@ font-size: 10px;
 
   body, #brand, nav, nav li.active {
     background-size: 250px 250px;
-  }
-
-  #nav-toggle {
-    background-image: url(http://plasticmind.com/i/nova/burger-2x.png);
-    background-size: 32px 32px;
   }
   .full-size:after {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAANCAYAAACgu+4kAAABPUlEQVQ4y52PP0vDUBTF362pRnFQHBRJBaOSChZEB1GHOupUv0CXulfQxTV7FgfHrJldA/kC+hmq3bK0gUCIJZDkeZO86G1Q/HPgx32575wTHrAPAbBpld/8c8U5+9qUh4GEqmWcTE6L0Ag1EqZnmA7lpGTmkkhwpjLLgpSQkHBWBJIoqYkpiYKyhJFQLM7lzJ+RmerInEBGFjRNWxqPRw/D4eudLMuLuJsXzBLqAlhB1pANZLvTuTzyff+ZC7mu+6gojRbebSENZFVklguKpYrs9vvX52EYvvCKPM97arfPjtGjIZuIgqwXMGgiLcMwulEUefwbBUEw6PWuLtC7J4p2ChgcWpZ1E8fxG/9Bk8lkpOt6FzMHyH6O4zhGmqYJ/6XwR6FpmrcYPkFOIVuyPwojiW3b96qqNv9VQPUOeXLj5YWTE94AAAAASUVORK5CIIA=);

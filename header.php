@@ -28,21 +28,15 @@
         <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ) ?>" rel="home"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></a>
         <?php echo ( is_home() || is_front_page() ) ? '</h1>' : '</div>'; ?>
       </div>
-      <a href="#" id="nav-toggle">More</a>
 
-      <nav id="site-nav">
-        
+      <button class="hamburger hamburger--squeeze" type="button" aria-label="Menu" aria-controls="site-nav">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+      <nav id="site-nav">        
         <?php wp_nav_menu( array( 'menu' => 'primary' ) ); ?>
-
-        <div id="site-search">
-          <!-- Google CSE Search Box Begins  -->
-          <form action="http://plasticmind.com/search/" id="searchbox_015335330216815419444:jwgqd5ch7wk">
-            <input name="q" type="text" size="16" class="field"/>
-            <input id="submit" type="submit" value="Search Plasticmind" name="submit" style="display: none;">
-          </form>
-          <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_015335330216815419444%3Ajwgqd5ch7wk"></script>
-          <!-- Google CSE Search Box Ends -->
-        </div>
       </nav>
       <div id="social-links">
         <ul>
