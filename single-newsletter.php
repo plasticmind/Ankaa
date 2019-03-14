@@ -564,8 +564,8 @@
                           <tbody><tr>
                               <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
                                   
-                                      
-                                          <img align="center" alt="" src="https://gallery.mailchimp.com/1d974b3c3d4644e32acdefc5e/images/7f557c32-c844-4bcc-929d-e2f9e42c31bd.jpg" width="564" style="max-width:900px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                  <?php $featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full'); ?>    
+                                          <img align="center" alt="<?php esc_attr(the_title());?>" src="<?php echo $featured_image_url[0]; ?>" width="564" style="max-width:900px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
                                       
                                   
                               </td>
