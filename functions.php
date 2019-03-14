@@ -3,7 +3,7 @@
 /* 
 	ANKAA THEME
 	by Jesse Gardner
-	last update: 07.28.2014
+	last update: March 14, 2019
 */
 
 
@@ -24,6 +24,9 @@ require_once ( get_template_directory() . '/lib/tweaks.php' );
 
 // Custom template tags
 require_once ( get_template_directory() . '/lib/tags.php' );
+
+// Custom post types
+require_once ( get_template_directory() . '/lib/post-types.php' );
 
 // Admin-related options
 require_once ( get_template_directory() . '/lib/admin.php' );
