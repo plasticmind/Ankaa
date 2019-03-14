@@ -565,7 +565,7 @@
             <tbody><tr>
               <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
               
-                <p>This part of the template should be editable in Mailchimp.</p>
+                <p>This is an introductary paragaraph. It doesn't appear that this information is editable in Mailchimp once the HTML has been imported into Mailchimp, though.</p>
 
               </td>
             </tr>
