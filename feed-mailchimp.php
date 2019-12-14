@@ -19,7 +19,7 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>';
 	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
 >
 <channel>
-	<title>HELLO WORLD: <?php wp_title_rss(); ?></title>
+	<title><?php wp_title_rss(); ?></title>
 	<atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
 	<link><?php bloginfo_rss('url') ?></link>
 	<description><?php bloginfo_rss("description") ?></description>
