@@ -1,0 +1,72 @@
+<?php
+/**
+ * Custom Feed Template for Mailchimp
+ *
+ */
+
+header('Content-Type: ' . feed_content_type('rss2') . '; charset=' . get_option('blog_charset'), true);
+$more = 1;
+
+echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>';
+
+?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+>
+<channel>
+	<title>HELLO WORLD: <?php wp_title_rss(); ?></title>
+	<atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
+	<link><?php bloginfo_rss('url') ?></link>
+	<description><?php bloginfo_rss("description") ?></description>
+	<lastBuildDate><?php
+		$date = get_lastpostmodified( 'GMT' );
+		echo $date ? mysql2date( 'r', $date, false ) : date( 'r' );
+	?></lastBuildDate>
+	<language><?php bloginfo_rss( 'language' ); ?></language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<?php
+	while( have_posts()) : the_post();
+	?>
+	<item>
+		<title><?php the_title_rss() ?></title>
+		<link><?php the_permalink_rss() ?></link>
+		<pubDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_post_time('Y-m-d H:i:s', true), false); ?></pubDate>
+		<dc:creator><![CDATA[<?php the_author() ?>]]></dc:creator>
+		<?php the_category_rss('rss2') ?>
+		<guid isPermaLink="false"><?php the_guid(); ?></guid>
+		<description><![CDATA[
+			<p><?php 
+				$subtitle = get_post_meta( $post->ID, 'pm_subtitle', true );      
+				echo (!empty($subtitle)) ? $subtitle : get_the_excerpt();
+			?></p>
+			<p><a href="<?php the_permalink(); ?>">Read the full post...</a></p>
+		]]></description>
+		<content:encoded><![CDATA[
+			<?php if ( has_post_thumbnail() ) : ?>
+				<?php $image_data = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "full" ); ?>
+				<?php $image_class = ($image_data[1]>700) ? ' full-size ultra-wide' : ''; ?>
+
+				<div class="entry-featuredimage<?php echo $image_class; ?>">
+				<?php the_post_thumbnail( array( 560, 560 ), array( 'itemprop' => 'image' ) ); ?> 
+				</div>
+		
+			<?php endif; ?>
+			<p class="archive-list-description">
+                <?php
+                  $subtitle = get_post_meta( $post->ID, 'pm_subtitle', true );      
+                  echo (!empty($subtitle)) ? $subtitle : get_the_excerpt_rss();
+                ?>
+			</p>
+			<p><a href="<?php the_permalink(); ?>">Read the full post...</a></p>
+		]]></content:encoded>
+		<?php rss_enclosure(); ?>
+	</item>
+	<?php endwhile; ?>
+</channel>
+</rss>

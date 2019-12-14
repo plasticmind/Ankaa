@@ -34,3 +34,6 @@ require_once ( get_template_directory() . '/lib/admin.php' );
 // Playing with Post Ratings
 require_once ( get_template_directory() . '/lib/post-rating.php' );
 
+// Feed-related scripts
+require_once ( get_template_directory() . '/lib/feeds.php' );
+

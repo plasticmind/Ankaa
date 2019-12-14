@@ -17,6 +17,7 @@ function mummyblog_excerpt_length( $length ) {
 //add_filter( 'excerpt_length', 'mummyblog_excerpt_length' );
 
 function new_excerpt_more( $more ) {
+	if (is_feed()) return;
 	return '... <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . 'Read More' . '</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
