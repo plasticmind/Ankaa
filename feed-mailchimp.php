@@ -60,7 +60,7 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>';
 			<p class="archive-list-description">
                 <?php
                   $subtitle = get_post_meta( $post->ID, 'pm_subtitle', true );      
-                  echo (!empty($subtitle)) ? $subtitle : get_the_excerpt_rss();
+                  echo (!empty($subtitle)) ? $subtitle : get_the_excerpt();
                 ?>
 			</p>
 			<p><a href="<?php the_permalink(); ?>">Read the full post...</a></p>
