@@ -2158,3 +2158,7 @@ div.controls a:hover {
   #social-links li a {
     background-image: url(http://plasticmind.com/i/nova/icons-social-2x.png);
     background-size: 128px 64px; } }
+
+.entry-featuredimage img[src$=".gif"] {
+  width: 100%;
+}
