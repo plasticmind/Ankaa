@@ -12,7 +12,6 @@
 $pm-dark-gray: #231F20;
 $pm-light-gray: #F1F2F2;
 
-
 :root {
   --brand-red: #F4282C;
   --main-bg-color: #f1f2f2;
@@ -1379,6 +1378,9 @@ div.controls a:hover {
 /* RESPONSIVE ------------------------ */
 
 @media all and (min-width: 851px) {
+  article.post:not(.has-post-thumbnail) {
+    padding-top: 240px;
+  }
   .site-header {
     margin-top: 30px;
   }
