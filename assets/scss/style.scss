@@ -14,15 +14,18 @@ $pm-light-gray: #F1F2F2;
 
 
 :root {
+  --brand-red: #F4282C;
   --main-bg-color: #f1f2f2;
   --main-bg-color-lighter: #fff;
   --main-bg-color-darker: #c1c2c2;
   --main-fg-color: #29353c;
   --main-fg-color-lighter: #59656c;
   --main-fg-color-darker: #151C24;
+  --select-color: #000;
   --link-bg-color: transparent;
   --link-fg-color: #F4282C;
-  --select-color: #F4282C;
+  --link-underline: #6fb3d4;
+  --link-underline-alt: #64da90;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -32,6 +35,9 @@ $pm-light-gray: #F1F2F2;
     --main-fg-color: #fff;
     --main-fg-color-lighter: #fff;
     --main-fg-color-darker: #c1c2c2;
+    --link-fg-color: #fff;
+    --link-underline: #D52472;
+    --link-underline-alt: #F4282C;
   }
 }
 
@@ -95,7 +101,7 @@ a {
   .content & {
     transition: all .75s cubic-bezier(0.23, 1, 0.32, 1);
     text-shadow: none;
-    background-image: linear-gradient(9deg, #6fb3d4 0%, #64da90 100%);
+    background-image: linear-gradient(9deg, var(--link-underline) 0%, var(--link-underline-alt) 100%);
     background-repeat: no-repeat;
     background-size: 100% 1px;
     background-position: 0 88%;
@@ -130,10 +136,10 @@ a:hover {
 footer.site-footer {
   color: var(--alt-fg-color);
 }
-::webkit-selection { background: rgba(255,255,0,.7); color: #000; text-shadow: none; }
-::moz-selection { background: rgba(255,255,0,.7); color: #000; text-shadow: none; }
-::selection { background: rgba(255,255,0,.7); color: #000; text-shadow: none; }
-pre::selection, code::selection { background: rgba(255,255,0,.9); color: #000; }
+::webkit-selection { background: var(--select-color); color: #fff; text-shadow: none; }
+::moz-selection { background: var(--select-color); color: #fff; text-shadow: none; }
+::selection { background: var(--select-color); color: #fff; text-shadow: none; }
+pre::selection, code::selection { background: var(--select-color); color: #fff; }
 
 /* TYPOGRAPHY ------------------------ */
 
@@ -230,15 +236,17 @@ footer.site-footer {
 /* = BRAND */
 
 #brand {
-  text-align: right;
+
   a {
+    text-align: center;
     @include brand-box;
     font-size: 16px;
     letter-spacing: 2.5px;
-    background: var(--link-fg-color);
+    background: var(--brand-red);
     color: #fff;
     .expanded & {
-      background: var(--link-fg-color);
+      text-align: right;
+      background: var(--brand-red);
       color: #fff;
       text-shadow: none;
       border-bottom: var(--main-bg-color);
@@ -279,7 +287,7 @@ $li-max-height: 100px;
       }
       &.current-menu-item,
       &.active {
-        border-right: solid 5px var(--link-fg-color);
+        border-right: solid 5px var(--brand-red);
       }
     }
     a {
@@ -294,7 +302,7 @@ $li-max-height: 100px;
       transition: border .6s;
       &:hover {
         transition: border .2s;
-        border-right: solid 5px var(--link-fg-color);
+        border-right: solid 3px var(--brand-red);
       }
     }
   }
@@ -307,6 +315,8 @@ $li-max-height: 100px;
     }
   }
 }
+
+.site-header nav li:first-child a {border-top: none;}
 
 /*! RESPONSIVE NAV */
 .hamburger {
@@ -576,27 +586,6 @@ margin: 0 -40px 35px;
 .entry-meta {
   margin-top: 3em;
   position: relative;
-  a {
-    color: #948e9c;
-    transition: all .3s;
-    text-decoration: none;
-    background-image: linear-gradient(to top,
-      rgba(0,0,0,0) 4%,
-      rgba(0,0,0,0.15) 4%,
-      rgba(0,0,0,0.15) 8%,
-      rgba(0,0,0,0) 8%
-    );
-    &:hover {
-      color: rgba(31,12,56,.9);
-      transition: all .15s;
-      background-image: linear-gradient(to top,
-      rgba(0,0,0,0) 4%,
-      rgba(0,0,0,0.25) 4%,
-      rgba(0,0,0,0.25) 8%,
-      rgba(0,0,0,0) 8%
-      );
-    }
-  }
 }
 
 /* Meta: Byline */
@@ -980,7 +969,7 @@ letter-spacing: -1px;
     padding: 0 3px;
     transition: all .75s cubic-bezier(0.23, 1, 0.32, 1);
     text-shadow: none;
-    background-image: linear-gradient(9deg, #6fb3d4 0%, #64da90 100%);
+    background-image: linear-gradient(9deg, var(--link-underline) 0%, var(--link-underline-alt) 100%);
     background-repeat: no-repeat;
     background-size: 100% 1px;
     background-position: 0 88%;
@@ -1344,7 +1333,6 @@ div.controls a:hover {
 /* RESPONSIVE ------------------------ */
 
 @media all and (min-width: 851px) {
-  .site-header nav li:first-child a {border-top: none;}
   #site-nav {
     display: block !important;
   }
@@ -1396,15 +1384,10 @@ display: block;
   #brand {
     text-align: left;
     a {
-      font-size: 32px;
-      height: 32px;
+      font-size: 16px;
       padding: 12px 65px 12px 12px;
       margin-right: 57px;
       border-right: 0;
-      border:none;
-      background-color: var(--link-fg-color);
-      color: #fff;
-      text-shadow: none;
     }
   }
   .site-header nav li {
@@ -1423,17 +1406,15 @@ display: block;
     position: absolute;
     top: 0;
     right: 0;
-    height: 56px;
+    height: 40px;
     display: block;
     border-left: 0;
-    background-color: white;
+
     transition:
     background .2s;
     outline: none;
     opacity: 1;
     &:hover {
-      background-color: var(--link-fg-color);
-      color: #fff;
       text-shadow: none;
       transition:
       border .3s,

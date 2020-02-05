@@ -1,12 +1,45 @@
 // Our custom stuff
 (function($) {
-$(document).ready(function() {
 
-	// Disable "faux underlines" on images
+  // Helper function: delay
+  var delay = (function(){
+    var timer = 0;
+    return function(callback, ms){
+      clearTimeout (timer);
+      timer = setTimeout(callback, ms);
+    };
+  })();
+
+  // EXPAND NAV WHEN SCROLLING PAST FULL IMAGE
+
+  var img_height = $(".entry-featuredimage.ultra-wide img").height();
+
+  $(window).scroll(function() {
+
+    delay(function(){
+
+      if ( typeof img_height !== 'undefined' ) {
+
+        if ( $(this).scrollTop() >= img_height ) {
+          $('.site-header').removeClass('collapsed');
+          console.log("Expand: Scrolltop: "+$(this).scrollTop()+" Height:"+img_height);
+        } else {
+          $('.site-header').addClass('collapsed');
+          console.log("Collapse: Scrolltop: "+$(this).scrollTop()+" Height:"+img_height);
+
+        }
+
+      }
+
+    }, 10);
+  }).scroll();
+
+  	// Disable "faux underlines" on images
 	$('img').parent('.entry-content a').css("background-image", "none");
 
 	// NAV
 	$( ".hamburger" ).on( "click", function(event) {
+
 		event.preventDefault();
 		$(this).toggleClass('is-active');
 		$('#site-nav').toggleClass('open').slideToggle('fast');
@@ -79,40 +112,7 @@ $(document).ready(function() {
 	});
 	$('#archive-chart li:first-child').mouseover();
 
-	// EXPAND NAV WHEN SCROLLING PAST FULL IMAGE
 
-	$(".entry-featuredimage.ultra-wide img").load(function(){
-  		var img_height = $(this).height();
-
-		if ( img_height > $(this).scrollTop() ) {
-			$('.site-header').addClass('collapsed');
-		}
-		$(window).scroll(function() {
-			
-			delay(function(){
-				if ( img_height != null) {
-
-					if ( $(this).scrollTop() >= img_height ) {
-						$('.site-header').removeClass('collapsed');
-					} else {
-						$('.site-header').addClass('collapsed');
-				    	
-					}				
-
-				}
-
-			}, 10);
-		});
-	});
-
-
-
-	var delay = (function(){
-	  var timer = 0;
-	  return function(callback, ms){
-	    clearTimeout (timer);
-	    timer = setTimeout(callback, ms);
-	  };
-	})();
-});
 })(jQuery);
+
+

@@ -21,7 +21,7 @@
 
   <div id="container">
 
-    <header class="site-header">
+    <header class="site-header collapsed">
       <div id="brand">
         <?php // Only the home page gets an H1 for the site title ?>
         <?php echo ( is_home() || is_front_page() ) ? '<h1>' : '<div>'; ?>
@@ -35,7 +35,7 @@
         </span>
       </button>
 
-      <nav id="site-nav">        
+      <nav id="site-nav">
         <?php wp_nav_menu( array( 'menu' => 'primary' ) ); ?>
       </nav>
       <div id="social-links">
