@@ -1378,7 +1378,7 @@ div.controls a:hover {
 /* RESPONSIVE ------------------------ */
 
 @media all and (min-width: 851px) {
-  article.post:not(.has-post-thumbnail) {
+  article:not(.has-post-thumbnail) {
     padding-top: 240px;
   }
   .site-header {
