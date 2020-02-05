@@ -1,8 +1,27 @@
+# App
+.htaccess
+node_modules
+/node_modules
 
-*.scssc
+# Compiled Assets
+/assets/js/vendor.js
+/assets/js/vendor.min.js
+/assets/js/custom.js
+/assets/js/custom.min.js
+/assets/css/style.css
+/assets/css/style.min.css
+/assets/css/style.css.map
 
+# Local Development Stuff
 *.sublime-project
-
 *.sublime-workspace
-
-*.DS_Store
+*.swp
+*.code-workspace
+.vscode
+*~
+.DS_Store
+.svn
+.cvs
+*.bak
+*.swp
+Thumbs.db

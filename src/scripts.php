@@ -15,9 +15,9 @@ function pm_load_scripts() {
 
     //wp_enqueue_script('jquery-remote', '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js', array(), null, true );
     // wp_enqueue_script( 'pm-plugins', get_template_dire_urictory_uri() . '/assets/js/plugins.min.js', array('jquery'), version_hash('/assets/js/plugins.min.js'), true );
-    wp_enqueue_script( 'pm-tools', get_template_directory_uri() . '/assets/js/tools.min.js', array(), pm_version_hash('/assets/js/tools.min.js'), true );
+    wp_enqueue_script( 'pm-tools', get_template_directory_uri() . '/assets/js/custom.min.js', array(), pm_version_hash('/assets/js/custom.min.js'), true );
     //wp_enqueue_script( 'wp-favorite-posts', plugins_url() . '/wp-favorite-posts/wpfp.js', array('jquery-remote'), null, true );
-    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr.custom.68660.js', array(), null, true );
+    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/assets/js/vendor.min.js', array(), pm_version_hash('/assets/js/custom.min.js'), true );
     wp_enqueue_script( 'mint', 'http://plasticmind.com/mint/?js', array(), null, true );
 
   }
