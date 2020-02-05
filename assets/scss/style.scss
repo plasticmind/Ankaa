@@ -56,15 +56,15 @@ body {
 /* STRUCTURE ------------------------- */
 
 #container {
-  margin: 35px auto;
+  margin: 0 auto;
   max-width: 1010px;
   min-width: 300px;
   position: relative;
 }
 .content,
 .secondary {
-  margin-left: 230px;
-  margin-right: 30px;
+  margin-left: 200px;
+  margin-right: 0;
   padding: 0 40px 35px;
 }
 .site-header {
@@ -105,7 +105,8 @@ a {
     background-repeat: no-repeat;
     background-size: 100% 1px;
     background-position: 0 88%;
-    &:hover {
+    &:hover,
+    &:focus {
       background-size: 100% 100%;
       color: #fff;
       transition-duration: .2s;
@@ -205,7 +206,8 @@ footer.site-footer {
   background-color: var(--main-fg-color);
   transition: background-color .2s, border .2s, color .2s;
   background-image: none;
-  &:hover {
+  &:hover
+  &:focus {
     background-color: var(link-color);
     color: #fff;
     text-shadow: none;
@@ -260,7 +262,8 @@ footer.site-footer {
       transition: opacity 0.45s;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       &:before {
         opacity: 1;
       }
@@ -325,12 +328,14 @@ $li-max-height: 100px;
       padding: 10px;
       border-top: solid 1px var(--main-bg-color-darker);
       transition: border .6s;
-      &:hover {
+      &:hover,
+      &:focus {
         transition: border .2s;
         border-right: solid 3px var(--brand-red);
       }
     }
   }
+  &:focus nav,
   &:hover nav {
     opacity: 1;
     transition: opacity .4s;
@@ -350,6 +355,9 @@ $li-max-height: 100px;
 
 .site-header.collapsed li {
   max-height: 0;
+}
+.site-header:focus li {
+  max-height: $li-max-height;
 }
 .site-header:hover #site-search,
 .site-header.collapsed #site-search {
@@ -468,7 +476,8 @@ text-align: center;
   line-height: 50px;
   width: 50px;
   display: inline-block;
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--link-fg-color);
     opacity: 1;
   }
@@ -614,7 +623,8 @@ margin: 0 -40px 35px;
   a {
     color: var(--main-fg-color-lighter);
     background-size: 100% 0;
-    &:hover {
+    &:hover,
+    &:focus {
       background-size: 100% 100%;
       color: var(--main-bg-color-lighter);
     }
@@ -663,12 +673,14 @@ $fav-color: #fe0072;
     transition: all 1s;
     &.remove {
       background-color: $fav-color;
-      &:hover {
+      &:hover,
+      &:focus {
         opacity: 0.5;
         transition: all .1s;
       }
     }
-    &:hover {
+    &:hover,
+    &:focus {
       background-image: $svg-icon-heart-mask;
       background-color: $fav-color;
       transition: all .1s;
@@ -1004,7 +1016,8 @@ letter-spacing: -1px;
     background-repeat: no-repeat;
     background-size: 100% 1px;
     background-position: 0 88%;
-    &:hover {
+    &:hover,
+    &:focus {
       background-size: 100% 100%;
 //      background-color: var(--link-fg-color);
       color: #fff;
@@ -1201,7 +1214,8 @@ background-color: rgba(76,84,82,.9);
   display: block;
   background-image: none !important;
   text-shadow: none !important;
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 1;
     background-color: var(--link-fg-color);
     color: #fff;
@@ -1229,7 +1243,8 @@ background-color: rgba(76,84,82,.9);
         display: block;
         padding: 0.5em 0;
         transition: all 0.25s;
-        &:hover {
+        &:hover,
+        &:focus {
           border-left: solid 5px var(--link-fg-color);
           padding-left: 0.5em;
         }
@@ -1364,6 +1379,9 @@ div.controls a:hover {
 /* RESPONSIVE ------------------------ */
 
 @media all and (min-width: 851px) {
+  .site-header {
+    margin-top: 35px;
+  }
   #site-nav {
     display: block !important;
   }
@@ -1431,7 +1449,8 @@ overflow: hidden;
     a {
       text-align: left;
       border-right: 0;
-      &:hover {
+      &:hover,
+      &:focus {
         border-left: solid 3px var(--brand-red);
       }
     }
@@ -1448,7 +1467,8 @@ overflow: hidden;
     background .2s;
     outline: none;
     opacity: 1;
-    &:hover {
+    &:hover,
+    &:focus {
       text-shadow: none;
       transition:
       border .3s,

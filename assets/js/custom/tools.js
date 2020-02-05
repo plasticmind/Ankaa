@@ -22,11 +22,8 @@
 
         if ( $(this).scrollTop() >= img_height ) {
           $('.site-header').removeClass('collapsed');
-          console.log("Expand: Scrolltop: "+$(this).scrollTop()+" Height:"+img_height);
         } else {
           $('.site-header').addClass('collapsed');
-          console.log("Collapse: Scrolltop: "+$(this).scrollTop()+" Height:"+img_height);
-
         }
 
       }
@@ -36,6 +33,12 @@
 
   	// Disable "faux underlines" on images
 	$('img').parent('.entry-content a').css("background-image", "none");
+
+	// NAV
+	$( "#brand a" ).focus(function() {
+    $('.site-header').removeClass('collapsed');
+    //console.log("FOCUSED");
+  });
 
 	// NAV
 	$( ".hamburger" ).on( "click", function(event) {
