@@ -107,7 +107,6 @@ a {
     background-position: 0 88%;
     &:hover {
       background-size: 100% 100%;
-  //      background-color: var(--link-fg-color);
       color: #fff;
       transition-duration: .2s;
     }
@@ -586,6 +585,15 @@ margin: 0 -40px 35px;
 .entry-meta {
   margin-top: 3em;
   position: relative;
+  a {
+    color: var(--main-fg-color-lighter);
+    background-size: 100% 0;
+    &:hover {
+      background-size: 100% 100%;
+      color: var(--main-bg-color-lighter);
+    }
+  }
+
 }
 
 /* Meta: Byline */
@@ -603,9 +611,6 @@ margin: 0 -40px 35px;
     text-transform: lowercase;
     &.item-category {
       font-weight: bold;
-    }
-    a {
-      background-image: none;
     }
   }
 }

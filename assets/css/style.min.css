@@ -290,10 +290,11 @@ pre code{padding:15px 0 15px;border-left:solid 15px #282a2e;display:inline-block
 .wp-caption{width:auto !important}
 .wp-caption-text{font-size:.8em;font-style:italic;margin:0 0 1em 0}
 .entry-meta{margin-top:3em;position:relative}
+.entry-meta a{color:var(--main-fg-color-lighter);background-size:100% 0}
+.entry-meta a:hover{background-size:100% 100%;color:var(--main-bg-color-lighter)}
 .entry-byline{padding:0 50px 0 0}
 .entry-meta .topic-list li{display:inline-block;margin-right:12px;text-transform:lowercase}
 .entry-meta .topic-list li.item-category{font-weight:bold}
-.entry-meta .topic-list li a{background-image:none}
 .entry-meta .wpfp-span{float:right;text-indent:-999em}
 .entry-meta .wpfp-span img{display:none}
 .entry-meta .wpfp-span a{display:block;height:32px;width:32px;background:var(--main-fg-color) no-repeat;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwdjMyaDMydi0zMmgtMzJ6bTE2IDI4LjI2MXMtMTQtNy45MjYtMTQtMTcuMDQ2YzAtOS4zNTYgMTMuMTU5LTEwLjM5OSAxNC0uNDU0IDEuMDEyLTkuOTM4IDE0LTguOTAzIDE0IC40NTQgMCA5LjEyLTE0IDE3LjA0Ni0xNCAxNy4wNDZ6Ii8+PC9zdmc+);font-family:"Proxima Nova","proxima-nova",sans-serif;text-shadow:none;-webkit-transition:all 1s;transition:all 1s}
