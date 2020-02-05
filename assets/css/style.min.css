@@ -428,7 +428,7 @@ div.controls a:hover{opacity:.7;filter:alpha(opacity=90);-webkit-transition:opac
 @media(prefers-color-scheme:dark){:root{--main-bg-color:#222a2f;--main-bg-color-lighter:#2d363b;--main-bg-color-darker:#000;--main-fg-color:#fff;--main-fg-color-lighter:#fff;--main-fg-color-darker:#c1c2c2;--link-fg-color:#fff;--link-underline:#d52472;--link-underline-alt:#f4282c}
 }@media(-webkit-min-device-pixel-ratio:1.3),(min-device-pixel-ratio:1.3),(min-resolution:1.3dppx){body,#brand,nav,nav li.active{background-size:250px 250px}
 #social-links li a{background-image:url(http://plasticmind.com/i/nova/icons-social-2x.png);background-size:128px 64px}
-}@media all and (min-width:851px){.site-header{margin-top:35px}
+}@media all and (min-width:851px){.site-header{margin-top:30px}
 #site-nav{display:block !important}
 .expanded #social-links{display:block !important}
 }@media all and (max-width:850px){#container{margin:0 !important}
