@@ -227,8 +227,10 @@ footer.site-footer{font-size:.8em;text-transform:uppercase}
 .assistive-text{position:absolute;overflow:hidden;clip:rect(0 0 0 0);height:1px;width:1px;margin:-1px;padding:0;border:0}
 .site-header{z-index:100;-webkit-transition:opacity .3s;transition:opacity .3s}
 .site-header a{text-decoration:none}
-#brand a{text-align:center;font-family:"Proxima Nova","proxima-nova",sans-serif;display:block;padding:8px;font-weight:bold;color:var(--main-bg-color);background-color:var(--main-fg-color);-webkit-transition:background-color .2s,border .2s,color .2s;transition:background-color .2s,border .2s,color .2s;background-image:none;font-size:16px;letter-spacing:2.5px;background:var(--brand-red);color:#fff}
+#brand a{text-align:center;font-family:"Proxima Nova","proxima-nova",sans-serif;display:block;padding:8px;font-weight:bold;color:var(--main-bg-color);background-color:var(--main-fg-color);-webkit-transition:background-color .2s,border .2s,color .2s;transition:background-color .2s,border .2s,color .2s;background-image:none;font-size:16px;letter-spacing:2.5px;background:var(--brand-red);background-image:linear-gradient(9deg,var(--brand-red) 0,var(--brand-red) 100%);color:#fff;-webkit-transition:all 1s cubic-bezier(0.6,-0.28,0.735,0.045);transition:all 1s cubic-bezier(0.6,-0.28,0.735,0.045);position:relative;z-index:100}
 #brand a:hover{background-color:var(link-color);color:#fff;text-shadow:none}
+#brand a:before{background-image:linear-gradient(9deg,var(--link-underline) 0,var(--link-underline-alt) 100%);content:'';display:block;height:100%;position:absolute;top:0;left:0;opacity:0;width:100%;z-index:-100;-webkit-transition:opacity .45s;transition:opacity .45s}
+#brand a:hover:before{opacity:1}
 .expanded #brand a{text-align:right;background:var(--brand-red);color:#fff;text-shadow:none;border-bottom:var(--main-bg-color)}
 .site-header nav{opacity:.7;border-top:0;-webkit-transition:opacity .4s;transition:opacity .4s;background:var(--main-bg-color)}
 .site-header nav ul{margin:0;padding:0;list-style:none}
@@ -436,11 +438,11 @@ div.controls a:hover{opacity:.7;filter:alpha(opacity=90);-webkit-transition:opac
 .site-header{position:relative;width:90%}
 .site-header:hover{margin-top:0}
 .site-header nav li{display:block}
-#brand{text-align:left}
-#brand a{font-size:16px;padding:12px 65px 12px 12px;margin-right:57px;border-right:0}
+#brand a{text-align:left;padding:12px 65px 12px 12px;margin-right:57px;border-right:0}
 .site-header nav li{max-height:100px;display:block}
 #site-nav{display:none;opacity:1}
-#site-nav li a{font-size:17px}
+#site-nav a{text-align:left;border-right:0}
+#site-nav a:hover{border-left:solid 3px var(--brand-red)}
 .hamburger{position:absolute;top:0;right:0;height:40px;display:block;border-left:0;-webkit-transition:background .2s;transition:background .2s;outline:0;opacity:1}
 .hamburger:hover{text-shadow:none;-webkit-transition:border .3s,background .3s;transition:border .3s,background .3s;opacity:1}
 #site-search .field{width:75%}
