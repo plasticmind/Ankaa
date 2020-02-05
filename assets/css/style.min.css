@@ -431,7 +431,7 @@ div.controls a:hover{opacity:.7;filter:alpha(opacity=90);-webkit-transition:opac
 .expanded #social-links{display:block !important}
 }@media all and (max-width:850px){#container{margin:0 !important}
 .content article{font-size:90%}
-.content .entry-title{font-size:28px}
+.content .entry-title{font-size:32px}
 .content,.secondary,.site-header,.site-footer{margin-left:5%;margin-right:5%}
 .content,.secondary{overflow:hidden;padding:35px 30px}
 .entry-featuredimage.full-size{margin:-35px -30px 25px;text-align:center}
