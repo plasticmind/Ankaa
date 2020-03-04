@@ -307,7 +307,6 @@ pre code{padding:15px 0 15px;border-left:solid 15px #282a2e;display:inline-block
 .entry-navigation{-webkit-font-smoothing:antialiased;width:100%;font-size:0;height:125px;position:relative;overflow:hidden;white-space:nowrap;-webkit-box-sizing:border-box;box-sizing:border-box}
 .entry-navigation *{-webkit-box-sizing:border-box;box-sizing:border-box}
 .entry-navigation a{display:block;height:100%;width:100%;position:absolute;text-decoration:none;color:white;padding:41.6666666667px 40px 0 40px;font-size:24px;font-weight:normal;background-color:#000;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;-webkit-user-select:none;-webkit-touch-callout:none;-webkit-transition:all .25s;transition:all .25s}
-.entry-navigation a.without-image{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScyMCcgdmlld0JveD0nMCAwIDUgMTAnPgoJPHJlY3Qgd2lkdGg9JzExMCUnIHg9Jy01JScgeT0nLTUlJyBoZWlnaHQ9JzExMCUnIGZpbGw9JyMzNjM0MzMnLz4KCTxsaW5lIHgxPSctMicgeTE9JzEnIHgyPSc3JyB5Mj0nMTAnIHN0cm9rZT0nIzQ2NDQ0Mycgc3Ryb2tlLXdpZHRoPScuNScvPgoJPGxpbmUgeDE9Jy0yJyB5MT0nNicgeDI9JzcnIHkyPScxNScgc3Ryb2tlPScjNDY0NDQzJyBzdHJva2Utd2lkdGg9Jy41Jy8+Cgk8bGluZSB4MT0nLTInIHkxPSctNCcgeDI9JzcnIHkyPSc1JyBzdHJva2U9JyM0NjQ0NDMnIHN0cm9rZS13aWR0aD0nLjUnLz4KPC9zdmc+")}
 .entry-navigation a+a{position:absolute;top:0;left:100%;margin-left:-40px}
 .entry-navigation a+a .entry-nav-control{background-color:rgba(0,0,0,0.8)}
 .entry-navigation a+a:hover,.entry-navigation a+a.hover-state{left:40px;margin-left:0}

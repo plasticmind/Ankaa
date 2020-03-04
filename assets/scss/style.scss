@@ -731,9 +731,6 @@ $nav-color: #000;
     -webkit-user-select: none;
     -webkit-touch-callout: none;
     transition: all .25s;
-    &.without-image {
-      background-image: $svg-placeholder;
-    }
   }
   a + a {
     position: absolute;
