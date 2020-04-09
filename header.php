@@ -19,6 +19,9 @@
 
 <body <?php body_class(); ?> itemscope="itemscope" itemtype="http://schema.org/WebPage">
 
+  <pre class="naked">Note: This site has gone naked for <a href="https://css-naked-day.github.io/" title="Celebrate CSS Naked Day">CSS Naked Day</a>.</pre>
+  <hr><br>
+
   <div id="container">
 
     <header class="site-header collapsed">
