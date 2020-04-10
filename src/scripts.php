@@ -8,7 +8,7 @@ function pm_load_scripts() {
   if (!is_admin()) {
     // Styles
     wp_enqueue_style( 'font-awesome', get_template_directory_uri().'/assets/css/font-awesome.min.css', null, null );
-  	//wp_enqueue_style( 'pm-style', get_template_directory_uri().'/assets/css/style.min.css', null, pm_version_hash('/assets/css/style.min.css') );
+  	wp_enqueue_style( 'pm-style', get_template_directory_uri().'/assets/css/style.min.css', null, pm_version_hash('/assets/css/style.min.css') );
     // Scripts
     //wp_deregister_script('jquery');
     wp_deregister_script('wp-favorite-posts');
@@ -22,8 +22,6 @@ function pm_load_scripts() {
 
   }
 }
-
-
 
 // Google Analytics
 
