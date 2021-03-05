@@ -531,10 +531,16 @@ margin: 1em 0;
   }
   .content ol {
       margin: 0 0 1.5em 1.5em;
-      margin-bottom: 20px;
+      margin-bottom: 1.5em;
       font-size: 0.9em;
   }
-
+  .content li {
+      margin-bottom: 0.25em;
+  }
+  .content li > ul {
+      margin-left: 2em;
+      margin-bottom: 0.5em;
+  }
 .content blockquote,
 .cbox {
 font-style: italic;
