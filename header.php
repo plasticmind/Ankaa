@@ -21,7 +21,7 @@
 
   <div id="container">
 
-    <header class="site-header<?php echo ( is_single() && !is_front_page() ) ? ' collapsed' : '';?>">
+    <header class="site-header<?php echo ( !is_front_page() ) ? ' collapsed' : '';?>">
       <div id="brand">
         <?php // Only the home page gets an H1 for the site title ?>
         <?php echo ( is_home() || is_front_page() ) ? '<h1>' : '<div>'; ?>
