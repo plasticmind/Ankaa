@@ -21,9 +21,9 @@
       if ( typeof img_height !== 'undefined' ) {
 
         if ( $(this).scrollTop() >= img_height ) {
-          $('.single .site-header').removeClass('collapsed');
+          $('.site-header').removeClass('collapsed');
         } else {
-          $('.single .site-header').addClass('collapsed');
+          $('.site-header').addClass('collapsed');
         }
 
       }
