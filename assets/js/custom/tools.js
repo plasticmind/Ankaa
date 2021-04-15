@@ -13,19 +13,22 @@
   // EXPAND NAV WHEN SCROLLING PAST FULL IMAGE
 
   var img_height = $(".entry-featuredimage.ultra-wide img").height();
+  if ( typeof img_height == 'undefined' ) {
+    $('.site-header').removeClass('collapsed');
+  }
 
+  
+  
   $(window).scroll(function() {
 
     delay(function(){
 
       if ( typeof img_height !== 'undefined' ) {
-
         if ( $(this).scrollTop() >= img_height ) {
           $('.site-header').removeClass('collapsed');
         } else {
           $('.site-header').addClass('collapsed');
-        }
-
+        }        
       }
 
     }, 10);
