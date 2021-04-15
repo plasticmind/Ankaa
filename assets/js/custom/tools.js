@@ -89,7 +89,7 @@
 		var script=document.createElement('script');
 		script.async = true;
 		script.type='text/javascript';
-		script.src='http://' + disqus_shortname + '.disqus.com/count.js';
+		script.src='https://' + disqus_shortname + '.disqus.com/count.js';
 		$("body").append(script);
 		// LOAD COMMENTS
 		$("#activate-comments").on( "click", function(event){
@@ -99,7 +99,7 @@
 			_gaq.push(['_trackEvent', 'Mobile', 'Comments Toggled']);
 			$.ajax({
 				type: "GET",
-				url: "http://"+disqus_shortname+".disqus.com/embed.js",
+				url: "https://"+disqus_shortname+".disqus.com/embed.js",
 				dataType: "script",
 				cache: true
 			});
